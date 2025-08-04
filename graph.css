@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  display: flex;
+  height: 100vh;
+}
+
+svg {
+  flex: 2;
+  border-right: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+#info-panel {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+#qa-display { 
+    border: 1px solid #ccc; 
+    padding: 2rem; 
+    width: 50%; 
+}
+
+.node {
+  cursor: grab;
+  stroke-width: 2px;
+  pointer-events: all;
+}
+
+.node.highlighted {
+  stroke: #000;
+  stroke-width: 3px;
+}
+
+.label {
+  pointer-events: none;
+  font-size: 14px;
+}
+
+button, select {
+  margin-top: 20px;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+h2, h3 {
+  margin-top: 0;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.legend-color {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  border: 1px solid #ccc;
+}
