@@ -21,26 +21,14 @@ let simulation;
 fetch('data.json')
   .then(res => res.json())
   .then(flashcards => {
-    const subtopics = [...new Set(flashcards.map(card => card.topic || "default"))];
+    // Ensure it's an array
+    if (!Array.isArray(flashcards)) {
+      console.error("Expected array of nodes in data.json");
+      return;
+    }
+
+    const topics = [...new Set(flashcards.map(card => card.topic || "default"))];
     const color = d3.scaleOrdinal(d3.schemeCategory10).domain(topics);
-
-    // // Build legend
-    // const legend = d3.select("#legend");
-    // topics.forEach(topic => {
-    //   legend.append("div").attr("class", "legend-item")
-    //     .html(`<div class="legend-color" style="background:${color(topic)}"></div> ${topic}`);
-    // });
-
-    // // Populate filter dropdown
-    // const dropdown = d3.select("#subtopic-filter");
-    // topics.forEach(sub => {
-    //   dropdown.append("option").attr("value", sub).text(sub);
-    // });
-
-    // dropdown.on("change", () => {
-    //   const selected = dropdown.node().value;
-    //   updateVisibility(selected);
-    // });
 
     allNodes = flashcards.map(card => ({
       id: card.id,
@@ -49,7 +37,7 @@ fetch('data.json')
     }));
 
     allLinks = flashcards.flatMap(card =>
-      card.links.map(targetId => ({ source: card.id, target: targetId }))
+      (card.edges || []).map(targetId => ({ source: card.id, target: targetId }))
     );
 
     simulation = d3.forceSimulation(allNodes)
@@ -76,10 +64,8 @@ fetch('data.json')
         selectedNodeId = d.id;
         nodeElements.classed("highlighted", nd => nd.id === d.id);
         document.getElementById("qa-display").innerHTML = `
-          <h3>${d.id}. ${d.question}</h3>
-          // <p>${d.answer}</p>
+          <h3>${d.id}. ${d.node}</h3>
         `;
-        MathJax.typesetPromise();
       });
 
     labelElements = container.append("g")
@@ -87,16 +73,9 @@ fetch('data.json')
       .data(allNodes)
       .join("text")
       .text(d => d.node)
-      .attr("class", "label");
-
-    // svg.on("click", () => {
-    //   selectedNodeId = null;
-    //   nodeElements.classed("highlighted", false);
-    //   document.getElementById("qa-display").innerHTML = `
-    //     <p>Click on a node to see its question and answer.</p>
-    //   `;
-    //   document.getElementById("suggestions").innerHTML = "";
-    // });
+      .attr("class", "label")
+      .style("font-size", "12px")
+      .style("pointer-events", "none"); // let clicks pass through
 
     simulation.on("tick", () => {
       linkElements
@@ -107,19 +86,8 @@ fetch('data.json')
       labelElements
         .attr("x", d => d.x + 25).attr("y", d => d.y);
     });
-
-    // function updateVisibility(filterValue) {
-    //   nodeElements.attr("visibility", d =>
-    //     filterValue === "all" || d.subtopic === filterValue ? "visible" : "hidden");
-    //   labelElements.attr("visibility", d =>
-    //     filterValue === "all" || d.subtopic === filterValue ? "visible" : "hidden");
-    //   linkElements.attr("visibility", d =>
-    //     (filterValue === "all" ||
-    //      (d.source.topic === filterValue && d.target.topic === filterValue)) ? "visible" : "hidden");
-    // }
   });
 
-// Drag support
 function drag(simulation) {
   function dragstarted(event, d) {
     if (!event.active) simulation.alphaTarget(0.3).restart();
@@ -143,80 +111,3 @@ function drag(simulation) {
     .on("drag", dragged)
     .on("end", dragended);
 }
-
-// function searchNode() {
-//   const term = document.getElementById("node-search").value.toLowerCase();
-//   if (!term) return;
-
-//   // Find first match by ID or question text
-//   const match = allNodes.find(d =>
-//     d.id.toLowerCase().includes(term) || d.question.toLowerCase().includes(term)
-//   );
-
-//   if (match) {
-//     // Highlight node
-//     selectedNodeId = match.id;
-//     nodeElements.classed("highlighted", d => d.id === match.id);
-
-//     // Show QA panel
-//     document.getElementById("qa-display").innerHTML = `
-//       <h3>Question (ID: ${match.id})</h3>
-//       <p>${match.question}</p>
-//       <h3>Answer</h3>
-//       <p>${match.answer}</p>
-//     `;
-//     MathJax.typesetPromise();
-
-//     // Zoom to it smoothly
-//     const scale = 1.5;
-//     const transform = d3.zoomIdentity
-//       .translate(width / 2 - match.x * scale, height / 2 - match.y * scale)
-//       .scale(scale);
-
-//     svg.transition()
-//       .duration(750)
-//       .call(zoom.transform, transform);
-//   } else {
-//     alert("No matching node found.");
-//   }
-// }
-
-// function updateSuggestions() {
-//   const term = document.getElementById("node-search").value.toLowerCase();
-//   const maxSuggestions = 3;
-//   const matches = allNodes.filter(d =>
-//     d.id.toLowerCase().includes(term) ||
-//     d.question.toLowerCase().includes(term)
-//   ).slice(0, maxSuggestions);
-
-//   const suggestionsDiv = document.getElementById("suggestions");
-//   suggestionsDiv.innerHTML = "";
-
-//   if (term && matches.length) {
-//     const list = document.createElement("ul");
-//     list.style.listStyle = "none";
-//     list.style.margin = "0";
-//     list.style.padding = "0";
-//     list.style.background = "#fff";
-//     list.style.border = "1px solid #ccc";
-//     list.style.position = "absolute";
-//     list.style.zIndex = "10";
-//     list.style.width = "100%";
-
-//     matches.forEach(match => {
-//       const item = document.createElement("li");
-//       item.textContent = `[${match.id}] ${match.question}`;
-//       item.style.padding = "8px";
-//       item.style.cursor = "pointer";
-//       item.addEventListener("click", () => {
-//         document.getElementById("node-search").value = match.id;
-//         suggestionsDiv.innerHTML = "";
-//       });
-//       list.appendChild(item);
-//     });
-
-//     suggestionsDiv.appendChild(list);
-//   }
-}
-
-
