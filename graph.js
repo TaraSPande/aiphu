@@ -20,24 +20,41 @@ let simulation;
 
 fetch('data.json')
   .then(res => res.json())
-  .then(flashcards => {
-    // Ensure it's an array
-    if (!Array.isArray(flashcards)) {
-      console.error("Expected array of nodes in data.json");
-      return;
-    }
-
-    const topics = [...new Set(flashcards.map(card => card.topic || "default"))];
+  .then(data => {
+    const topics = [...new Set(data.map(d => d.topic || "default"))];
     const color = d3.scaleOrdinal(d3.schemeCategory10).domain(topics);
 
-    allNodes = flashcards.map(card => ({
-      id: card.id,
-      node: card.node,
-      topic: card.topic || "default"
+    // Build legend
+    const legend = d3.select("#legend");
+    topics.forEach(topic => {
+      legend.append("div").attr("class", "legend-item")
+        .html(`<div class="legend-color" style="background:${color(topic)}"></div> ${topic}`);
+    });
+
+    // Populate filter dropdown
+    const dropdown = d3.select("#subtopic-filter");
+    dropdown.append("option").attr("value", "all").text("All");
+    topics.forEach(topic => {
+      dropdown.append("option").attr("value", topic).text(topic);
+    });
+
+    dropdown.on("change", () => {
+      const selected = dropdown.node().value;
+      updateVisibility(selected);
+    });
+
+    allNodes = data.map(d => ({
+      id: d.id,
+      question: d.node,  // Use 'node' as label
+      answer: `Topic: ${d.topic}`,  // Placeholder
+      topic: d.topic || "default"
     }));
 
-    allLinks = flashcards.flatMap(card =>
-      (card.edges || []).map(targetId => ({ source: card.id, target: targetId }))
+    allLinks = data.flatMap(d =>
+      (d.edges || []).map(targetId => ({
+        source: d.id,
+        target: targetId
+      }))
     );
 
     simulation = d3.forceSimulation(allNodes)
@@ -64,18 +81,27 @@ fetch('data.json')
         selectedNodeId = d.id;
         nodeElements.classed("highlighted", nd => nd.id === d.id);
         document.getElementById("qa-display").innerHTML = `
-          <h3>${d.id}. ${d.node}</h3>
+          <h3>${d.id}. ${d.question}</h3>
+          <p>${d.answer}</p>
         `;
+        MathJax.typesetPromise?.();
       });
 
     labelElements = container.append("g")
       .selectAll("text")
       .data(allNodes)
       .join("text")
-      .text(d => d.node)
-      .attr("class", "label")
-      .style("font-size", "12px")
-      .style("pointer-events", "none"); // let clicks pass through
+      .text(d => d.question)
+      .attr("class", "label");
+
+    svg.on("click", () => {
+      selectedNodeId = null;
+      nodeElements.classed("highlighted", false);
+      document.getElementById("qa-display").innerHTML = `
+        <p>Click on a node to see its question and answer.</p>
+      `;
+      document.getElementById("suggestions").innerHTML = "";
+    });
 
     simulation.on("tick", () => {
       linkElements
@@ -86,8 +112,19 @@ fetch('data.json')
       labelElements
         .attr("x", d => d.x + 25).attr("y", d => d.y);
     });
+
+    function updateVisibility(filterValue) {
+      nodeElements.attr("visibility", d =>
+        filterValue === "all" || d.topic === filterValue ? "visible" : "hidden");
+      labelElements.attr("visibility", d =>
+        filterValue === "all" || d.topic === filterValue ? "visible" : "hidden");
+      linkElements.attr("visibility", d =>
+        filterValue === "all" ||
+        (d.source.topic === filterValue && d.target.topic === filterValue) ? "visible" : "hidden");
+    }
   });
 
+// Drag support
 function drag(simulation) {
   function dragstarted(event, d) {
     if (!event.active) simulation.alphaTarget(0.3).restart();
@@ -110,4 +147,75 @@ function drag(simulation) {
     .on("start", dragstarted)
     .on("drag", dragged)
     .on("end", dragended);
+}
+
+function searchNode() {
+  const term = document.getElementById("node-search").value.toLowerCase();
+  if (!term) return;
+
+  const match = allNodes.find(d =>
+    d.id.toLowerCase().includes(term) || d.question.toLowerCase().includes(term)
+  );
+
+  if (match) {
+    selectedNodeId = match.id;
+    nodeElements.classed("highlighted", d => d.id === match.id);
+
+    document.getElementById("qa-display").innerHTML = `
+      <h3>Node: ${match.id}</h3>
+      <p>${match.question}</p>
+      <p>${match.answer}</p>
+    `;
+    MathJax.typesetPromise?.();
+
+    const scale = 1.5;
+    const transform = d3.zoomIdentity
+      .translate(width / 2 - match.x * scale, height / 2 - match.y * scale)
+      .scale(scale);
+
+    svg.transition().duration(750).call(zoom.transform, transform);
+  } else {
+    alert("No matching node found.");
+  }
+}
+
+function updateSuggestions() {
+  const term = document.getElementById("node-search").value.toLowerCase();
+  const maxSuggestions = 3;
+  const matches = allNodes.filter(d =>
+    d.id.toLowerCase().includes(term) || d.question.toLowerCase().includes(term)
+  ).slice(0, maxSuggestions);
+
+  const suggestionsDiv = document.getElementById("suggestions");
+  suggestionsDiv.innerHTML = "";
+
+  if (term && matches.length) {
+    const list = document.createElement("ul");
+    Object.assign(list.style, {
+      listStyle: "none",
+      margin: "0",
+      padding: "0",
+      background: "#fff",
+      border: "1px solid #ccc",
+      position: "absolute",
+      zIndex: "10",
+      width: "100%"
+    });
+
+    matches.forEach(match => {
+      const item = document.createElement("li");
+      item.textContent = `[${match.id}] ${match.question}`;
+      Object.assign(item.style, {
+        padding: "8px",
+        cursor: "pointer"
+      });
+      item.addEventListener("click", () => {
+        document.getElementById("node-search").value = match.id;
+        suggestionsDiv.innerHTML = "";
+      });
+      list.appendChild(item);
+    });
+
+    suggestionsDiv.appendChild(list);
+  }
 }
