@@ -12,10 +12,18 @@ svg {
 }
 
 #info-panel {
-  flex: 1;
-  padding: 20px;
+  position: absolute;         /* or use 'fixed' if you want it to stay even when scrolling */
+  top: 20px;
+  right: 20px;
+  width: 300px;               /* Set desired width */
+  max-height: 40vh;           /* Optional: prevent it from being too tall */
+  padding: 16px;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   overflow-y: auto;
+  z-index: 10;                /* Keep it above other elements */
 }
 
 #qa-display { 
