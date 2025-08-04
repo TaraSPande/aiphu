@@ -21,32 +21,31 @@ let simulation;
 fetch('data.json')
   .then(res => res.json())
   .then(flashcards => {
-    const subtopics = [...new Set(flashcards.map(card => card.subtopic || "default"))];
-    const color = d3.scaleOrdinal(d3.schemeCategory10).domain(subtopics);
+    const subtopics = [...new Set(flashcards.map(card => card.topic || "default"))];
+    const color = d3.scaleOrdinal(d3.schemeCategory10).domain(topics);
 
-    // Build legend
-    const legend = d3.select("#legend");
-    subtopics.forEach(subtopic => {
-      legend.append("div").attr("class", "legend-item")
-        .html(`<div class="legend-color" style="background:${color(subtopic)}"></div> ${subtopic}`);
-    });
+    // // Build legend
+    // const legend = d3.select("#legend");
+    // topics.forEach(topic => {
+    //   legend.append("div").attr("class", "legend-item")
+    //     .html(`<div class="legend-color" style="background:${color(topic)}"></div> ${topic}`);
+    // });
 
-    // Populate filter dropdown
-    const dropdown = d3.select("#subtopic-filter");
-    subtopics.forEach(sub => {
-      dropdown.append("option").attr("value", sub).text(sub);
-    });
+    // // Populate filter dropdown
+    // const dropdown = d3.select("#subtopic-filter");
+    // topics.forEach(sub => {
+    //   dropdown.append("option").attr("value", sub).text(sub);
+    // });
 
-    dropdown.on("change", () => {
-      const selected = dropdown.node().value;
-      updateVisibility(selected);
-    });
+    // dropdown.on("change", () => {
+    //   const selected = dropdown.node().value;
+    //   updateVisibility(selected);
+    // });
 
     allNodes = flashcards.map(card => ({
       id: card.id,
-      question: card.question,
-      answer: card.answer,
-      subtopic: card.subtopic || "default"
+      node: card.node,
+      topic: card.topic || "default"
     }));
 
     allLinks = flashcards.flatMap(card =>
@@ -69,7 +68,7 @@ fetch('data.json')
       .data(allNodes)
       .join("circle")
       .attr("r", 20)
-      .attr("fill", d => color(d.subtopic))
+      .attr("fill", d => color(d.topic))
       .attr("class", "node")
       .call(drag(simulation))
       .on("click", (event, d) => {
@@ -78,7 +77,7 @@ fetch('data.json')
         nodeElements.classed("highlighted", nd => nd.id === d.id);
         document.getElementById("qa-display").innerHTML = `
           <h3>${d.id}. ${d.question}</h3>
-          <p>${d.answer}</p>
+          // <p>${d.answer}</p>
         `;
         MathJax.typesetPromise();
       });
@@ -87,17 +86,17 @@ fetch('data.json')
       .selectAll("text")
       .data(allNodes)
       .join("text")
-      .text(d => d.question)
+      .text(d => d.node)
       .attr("class", "label");
 
-    svg.on("click", () => {
-      selectedNodeId = null;
-      nodeElements.classed("highlighted", false);
-      document.getElementById("qa-display").innerHTML = `
-        <p>Click on a node to see its question and answer.</p>
-      `;
-      document.getElementById("suggestions").innerHTML = "";
-    });
+    // svg.on("click", () => {
+    //   selectedNodeId = null;
+    //   nodeElements.classed("highlighted", false);
+    //   document.getElementById("qa-display").innerHTML = `
+    //     <p>Click on a node to see its question and answer.</p>
+    //   `;
+    //   document.getElementById("suggestions").innerHTML = "";
+    // });
 
     simulation.on("tick", () => {
       linkElements
@@ -109,15 +108,15 @@ fetch('data.json')
         .attr("x", d => d.x + 25).attr("y", d => d.y);
     });
 
-    function updateVisibility(filterValue) {
-      nodeElements.attr("visibility", d =>
-        filterValue === "all" || d.subtopic === filterValue ? "visible" : "hidden");
-      labelElements.attr("visibility", d =>
-        filterValue === "all" || d.subtopic === filterValue ? "visible" : "hidden");
-      linkElements.attr("visibility", d =>
-        (filterValue === "all" ||
-         (d.source.subtopic === filterValue && d.target.subtopic === filterValue)) ? "visible" : "hidden");
-    }
+    // function updateVisibility(filterValue) {
+    //   nodeElements.attr("visibility", d =>
+    //     filterValue === "all" || d.subtopic === filterValue ? "visible" : "hidden");
+    //   labelElements.attr("visibility", d =>
+    //     filterValue === "all" || d.subtopic === filterValue ? "visible" : "hidden");
+    //   linkElements.attr("visibility", d =>
+    //     (filterValue === "all" ||
+    //      (d.source.topic === filterValue && d.target.topic === filterValue)) ? "visible" : "hidden");
+    // }
   });
 
 // Drag support
@@ -145,79 +144,79 @@ function drag(simulation) {
     .on("end", dragended);
 }
 
-function searchNode() {
-  const term = document.getElementById("node-search").value.toLowerCase();
-  if (!term) return;
+// function searchNode() {
+//   const term = document.getElementById("node-search").value.toLowerCase();
+//   if (!term) return;
 
-  // Find first match by ID or question text
-  const match = allNodes.find(d =>
-    d.id.toLowerCase().includes(term) || d.question.toLowerCase().includes(term)
-  );
+//   // Find first match by ID or question text
+//   const match = allNodes.find(d =>
+//     d.id.toLowerCase().includes(term) || d.question.toLowerCase().includes(term)
+//   );
 
-  if (match) {
-    // Highlight node
-    selectedNodeId = match.id;
-    nodeElements.classed("highlighted", d => d.id === match.id);
+//   if (match) {
+//     // Highlight node
+//     selectedNodeId = match.id;
+//     nodeElements.classed("highlighted", d => d.id === match.id);
 
-    // Show QA panel
-    document.getElementById("qa-display").innerHTML = `
-      <h3>Question (ID: ${match.id})</h3>
-      <p>${match.question}</p>
-      <h3>Answer</h3>
-      <p>${match.answer}</p>
-    `;
-    MathJax.typesetPromise();
+//     // Show QA panel
+//     document.getElementById("qa-display").innerHTML = `
+//       <h3>Question (ID: ${match.id})</h3>
+//       <p>${match.question}</p>
+//       <h3>Answer</h3>
+//       <p>${match.answer}</p>
+//     `;
+//     MathJax.typesetPromise();
 
-    // Zoom to it smoothly
-    const scale = 1.5;
-    const transform = d3.zoomIdentity
-      .translate(width / 2 - match.x * scale, height / 2 - match.y * scale)
-      .scale(scale);
+//     // Zoom to it smoothly
+//     const scale = 1.5;
+//     const transform = d3.zoomIdentity
+//       .translate(width / 2 - match.x * scale, height / 2 - match.y * scale)
+//       .scale(scale);
 
-    svg.transition()
-      .duration(750)
-      .call(zoom.transform, transform);
-  } else {
-    alert("No matching node found.");
-  }
-}
+//     svg.transition()
+//       .duration(750)
+//       .call(zoom.transform, transform);
+//   } else {
+//     alert("No matching node found.");
+//   }
+// }
 
-function updateSuggestions() {
-  const term = document.getElementById("node-search").value.toLowerCase();
-  const maxSuggestions = 3;
-  const matches = allNodes.filter(d =>
-    d.id.toLowerCase().includes(term) ||
-    d.question.toLowerCase().includes(term)
-  ).slice(0, maxSuggestions);
+// function updateSuggestions() {
+//   const term = document.getElementById("node-search").value.toLowerCase();
+//   const maxSuggestions = 3;
+//   const matches = allNodes.filter(d =>
+//     d.id.toLowerCase().includes(term) ||
+//     d.question.toLowerCase().includes(term)
+//   ).slice(0, maxSuggestions);
 
-  const suggestionsDiv = document.getElementById("suggestions");
-  suggestionsDiv.innerHTML = "";
+//   const suggestionsDiv = document.getElementById("suggestions");
+//   suggestionsDiv.innerHTML = "";
 
-  if (term && matches.length) {
-    const list = document.createElement("ul");
-    list.style.listStyle = "none";
-    list.style.margin = "0";
-    list.style.padding = "0";
-    list.style.background = "#fff";
-    list.style.border = "1px solid #ccc";
-    list.style.position = "absolute";
-    list.style.zIndex = "10";
-    list.style.width = "100%";
+//   if (term && matches.length) {
+//     const list = document.createElement("ul");
+//     list.style.listStyle = "none";
+//     list.style.margin = "0";
+//     list.style.padding = "0";
+//     list.style.background = "#fff";
+//     list.style.border = "1px solid #ccc";
+//     list.style.position = "absolute";
+//     list.style.zIndex = "10";
+//     list.style.width = "100%";
 
-    matches.forEach(match => {
-      const item = document.createElement("li");
-      item.textContent = `[${match.id}] ${match.question}`;
-      item.style.padding = "8px";
-      item.style.cursor = "pointer";
-      item.addEventListener("click", () => {
-        document.getElementById("node-search").value = match.id;
-        suggestionsDiv.innerHTML = "";
-      });
-      list.appendChild(item);
-    });
+//     matches.forEach(match => {
+//       const item = document.createElement("li");
+//       item.textContent = `[${match.id}] ${match.question}`;
+//       item.style.padding = "8px";
+//       item.style.cursor = "pointer";
+//       item.addEventListener("click", () => {
+//         document.getElementById("node-search").value = match.id;
+//         suggestionsDiv.innerHTML = "";
+//       });
+//       list.appendChild(item);
+//     });
 
-    suggestionsDiv.appendChild(list);
-  }
+//     suggestionsDiv.appendChild(list);
+//   }
 }
 
 
