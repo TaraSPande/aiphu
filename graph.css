@@ -16,7 +16,7 @@ svg {
   top: 20px;
   right: 20px;
   width: 300px;               /* Set desired width */
-  height: 700px;           /* Optional: prevent it from being too tall */
+  height: 400px;           /* Optional: prevent it from being too tall */
   padding: 16px;
   background: white;
   border: 1px solid #ccc;
