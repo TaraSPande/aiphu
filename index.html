@@ -26,10 +26,12 @@
 
     <div id="legend" style="margin-top: 10px;"></div>
 
-<!--     <label for="node-search" style="margin-top: 20px; display: block;">Search node:</label><br>
-    <input type="text" id="node-search" placeholder="Search by question or ID" style="width: 50%; padding: 6px;" oninput="updateSuggestions()" autocomplete="off" /> -->
-    <div id="suggestions" style="position: relative;"></div>
-    <button onclick="searchNode()">Search</button>
+<!--     <label for="node-search" style="margin-top: 20px; display: block;">Search node:</label><br> -->
+    <div id="search-container" style="display: flex; gap: 8px; align-items: center; max-width: 400px;">
+      <input id="node-search" placeholder="Search node..." oninput="updateSuggestions()" style="flex: 1; padding: 6px;" />
+      <button onclick="searchNode()" style="padding: 6px 12px;">🔍</button>
+    </div>
+    <div id="suggestions"></div>
 
 <!--     <div id="qa-display" style="margin-top: 20px;">
       <p>Click on a node to see its question and answer.</p>
