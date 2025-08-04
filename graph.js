@@ -45,8 +45,8 @@ fetch('data.json')
 
     allNodes = data.map(d => ({
       id: d.id,
-      question: d.node,  // Use 'node' as label
-      answer: `Topic: ${d.topic}`,  // Placeholder
+      question: d.node,
+      // answer: `Topic: ${d.topic}`,  // Placeholder
       topic: d.topic || "default"
     }));
 
@@ -80,11 +80,11 @@ fetch('data.json')
         event.stopPropagation();
         selectedNodeId = d.id;
         nodeElements.classed("highlighted", nd => nd.id === d.id);
-        document.getElementById("qa-display").innerHTML = `
-          <h3>${d.id}. ${d.question}</h3>
-          <p>${d.answer}</p>
-        `;
-        MathJax.typesetPromise?.();
+        // document.getElementById("qa-display").innerHTML = `
+        //   <h3>${d.id}. ${d.question}</h3>
+        //   <p>${d.answer}</p>
+        // `;
+        // MathJax.typesetPromise?.();
       });
 
     labelElements = container.append("g")
@@ -97,9 +97,9 @@ fetch('data.json')
     svg.on("click", () => {
       selectedNodeId = null;
       nodeElements.classed("highlighted", false);
-      document.getElementById("qa-display").innerHTML = `
-        <p>Click on a node to see its question and answer.</p>
-      `;
+      // document.getElementById("qa-display").innerHTML = `
+      //   <p>Click on a node to see its question and answer.</p>
+      // `;
       document.getElementById("suggestions").innerHTML = "";
     });
 
