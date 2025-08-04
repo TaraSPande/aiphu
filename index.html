@@ -24,16 +24,18 @@
       <option value="all">All</option>
     </select> -->
 
-    <div id="legend" style="margin-top: 10px;"></div>
-
 <!--     <label for="node-search" style="margin-top: 20px; display: block;">Search node:</label><br> -->
     <div id="search-container">
       <input id="node-search" placeholder="Search node..." oninput="updateSuggestions()"
-         style="flex: 1; padding: 6px; height: 36px; box-sizing: border-box; vertical-align: top;" />
+         style="flex: 1; padding: 6px; height: 36px; box-sizing: border-box; 
+                border: 1px solid #ccc; margin: 0;" />
       <button onclick="searchNode()"
-          style="padding: 6px 12px; height: 36px; box-sizing: border-box; vertical-align: top;">🔍</button>
+          style="padding: 6px 12px; height: 36px; box-sizing: border-box; 
+                 border: 1px solid #ccc; margin: 0;">🔍</button>
     </div>
     <div id="suggestions"></div>
+
+    <div id="legend" style="margin-top: 10px;"></div>
 
 <!--     <div id="qa-display" style="margin-top: 20px;">
       <p>Click on a node to see its question and answer.</p>
