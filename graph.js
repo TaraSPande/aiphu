@@ -18,7 +18,7 @@ let allLinks = [];
 let nodeElements, linkElements, labelElements;
 let simulation;
 
-fetch('flashcards.json')
+fetch('data.json')
   .then(res => res.json())
   .then(flashcards => {
     const subtopics = [...new Set(flashcards.map(card => card.subtopic || "default"))];
