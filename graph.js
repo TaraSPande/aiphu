@@ -80,6 +80,7 @@ fetch('data.json')
         event.stopPropagation();
         selectedNodeId = d.id;
         nodeElements.classed("highlighted", nd => nd.id === d.id);
+        document.getElementById("node-search").value = match.node;
         // document.getElementById("qa-display").innerHTML = `
         //   <h3>${d.id}. ${d.question}</h3>
         //   <p>${d.answer}</p>
@@ -101,6 +102,7 @@ fetch('data.json')
       //   <p>Click on a node to see its question and answer.</p>
       // `;
       document.getElementById("suggestions").innerHTML = "";
+      document.getElementById("node-search").value = "";
     });
 
     simulation.on("tick", () => {
@@ -162,6 +164,7 @@ function searchNode() {
     // Highlight node
     selectedNodeId = match.id;
     nodeElements.classed("highlighted", d => d.id === match.id);
+    document.getElementById("node-search").value = match.node;
 
     // Zoom to it smoothly
     const scale = 1.5;
