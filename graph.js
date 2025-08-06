@@ -221,7 +221,7 @@ function updateSuggestions() {
       border: "1px solid #ccc",
       position: "absolute",
       zIndex: "10",
-      width: "100%"
+      width: "80%"
     });
 
     matches.forEach(match => {
