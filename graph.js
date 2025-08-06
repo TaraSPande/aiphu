@@ -9,7 +9,14 @@ const zoom = d3.zoom()
 svg.call(zoom);
 
 function resetView() {
-  svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity);
+  const zoomOutScale = 0.5;
+  const centerX = width / 2;
+  const centerY = height / 2;
+  const transform = d3.zoomIdentity
+    .translate(centerX * (1 - zoomOutScale), centerY * (1 - zoomOutScale))
+    .scale(zoomOutScale);
+
+  svg.transition().duration(500).call(zoom.transform, transform);
 }
 
 let selectedNodeId = null;
@@ -63,8 +70,8 @@ fetch('data.json')
       .force("center", d3.forceCenter(width / 2, height / 2))
       .force("collision", d3.forceCollide().radius(30));
 
-    for (let i = 0; i < 300; ++i) simulation.tick();
-    simulation.stop();
+    // for (let i = 0; i < 300; ++i) simulation.tick();
+    // simulation.stop();
 
     linkElements = container.append("g")
       .attr("stroke", "#aaa")
@@ -129,7 +136,7 @@ fetch('data.json')
         (d.source.topic === filterValue && d.target.topic === filterValue) ? "visible" : "hidden");
     }
 
-    const initialZoom = d3.zoomIdentity.scale(0.75);
+    const initialZoom = d3.zoomIdentity.scale(0.5);
     svg.call(zoom.transform, initialZoom);
   });
 
