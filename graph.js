@@ -136,8 +136,15 @@ fetch('data.json')
         (d.source.topic === filterValue && d.target.topic === filterValue) ? "visible" : "hidden");
     }
 
-    const initialZoom = d3.zoomIdentity.scale(0.5);
-    svg.call(zoom.transform, initialZoom);
+    const initialScale = 0.5;
+    const centerX = width / 2;
+    const centerY = height / 2;
+
+    const initialTransform = d3.zoomIdentity
+      .translate(centerX - centerX * initialScale, centerY - centerY * initialScale)
+      .scale(initialScale);
+
+    svg.call(zoom.transform, initialTransform);
   });
 
 // Drag support
