@@ -892,5 +892,59 @@
     "node": "Transfer Learning",
     "edges": ["98"],
     "topic": "Algorithms"
+  },
+  {
+    "id": "154",
+    "node": "Gene Therapies",
+    "edges": ["52"],
+    "topic": "Pharmacology"
+  },
+  {
+    "id": "155",
+    "node": "Singular Value Decomposition (SVD)",
+    "edges": ["43"],
+    "topic": "Algorithms"
+  },
+  {
+    "id": "156",
+    "node": "Support Vector Machine (SVM)",
+    "edges": ["46", "47"],
+    "topic": "Algorithms"
+  },
+  {
+    "id": "157",
+    "node": "EC2",
+    "edges": ["26"],
+    "topic": "Infrastructure"
+  },
+  {
+    "id": "158",
+    "node": "EFS",
+    "edges": ["26"],
+    "topic": "Infrastructure"
+  },
+  {
+    "id": "159",
+    "node": "S3",
+    "edges": ["158"],
+    "topic": "Infrastructure"
+  },
+  {
+    "id": "160",
+    "node": "Parquet",
+    "edges": ["70"],
+    "topic": "Infrastructure"
+  },
+  {
+    "id": "161",
+    "node": "FASTA",
+    "edges": ["52", "160"],
+    "topic": "Infrastructure"
+  },
+  {
+    "id": "162",
+    "node": "SMILES",
+    "edges": ["53", "160", "161"],
+    "topic": "Infrastructure"
   }
 ]
