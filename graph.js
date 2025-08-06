@@ -60,7 +60,11 @@ fetch('data.json')
     simulation = d3.forceSimulation(allNodes)
       .force("link", d3.forceLink(allLinks).id(d => d.id).distance(150))
       .force("charge", d3.forceManyBody().strength(-300))
-      .force("center", d3.forceCenter(width / 2, height / 2));
+      .force("center", d3.forceCenter(width / 2, height / 2))
+      .force("collision", d3.forceCollide().radius(30));
+
+    for (let i = 0; i < 300; ++i) simulation.tick();
+    simulation.stop();
 
     linkElements = container.append("g")
       .attr("stroke", "#aaa")
@@ -124,6 +128,9 @@ fetch('data.json')
         filterValue === "all" ||
         (d.source.topic === filterValue && d.target.topic === filterValue) ? "visible" : "hidden");
     }
+
+    const initialZoom = d3.zoomIdentity.scale(0.75);
+    svg.call(zoom.transform, initialZoom);
   });
 
 // Drag support
