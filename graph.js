@@ -45,7 +45,7 @@ fetch('data.json')
 
     allNodes = data.map(d => ({
       id: d.id,
-      question: d.node,
+      node: d.node,
       // answer: `Topic: ${d.topic}`,  // Placeholder
       topic: d.topic || "default"
     }));
@@ -82,7 +82,7 @@ fetch('data.json')
         nodeElements.classed("highlighted", nd => nd.id === d.id);
         document.getElementById("node-search").value = match.node;
         // document.getElementById("qa-display").innerHTML = `
-        //   <h3>${d.id}. ${d.question}</h3>
+        //   <h3>${d.id}. ${d.node}</h3>
         //   <p>${d.answer}</p>
         // `;
         // MathJax.typesetPromise?.();
@@ -92,7 +92,7 @@ fetch('data.json')
       .selectAll("text")
       .data(allNodes)
       .join("text")
-      .text(d => d.question)
+      .text(d => d.node)
       .attr("class", "label");
 
     svg.on("click", () => {
@@ -157,7 +157,7 @@ function searchNode() {
 
   // Find first match by ID or question text
   const match = allNodes.find(d =>
-    d.id.toLowerCase().includes(term) || d.question.toLowerCase().includes(term)
+    d.id.toLowerCase().includes(term) || d.node.toLowerCase().includes(term)
   );
 
   if (match) {
@@ -184,7 +184,7 @@ function updateSuggestions() {
   const term = document.getElementById("node-search").value.toLowerCase();
   const maxSuggestions = 3;
   const matches = allNodes.filter(d =>
-    d.id.toLowerCase().includes(term) || d.question.toLowerCase().includes(term)
+    d.id.toLowerCase().includes(term) || d.node.toLowerCase().includes(term)
   ).slice(0, maxSuggestions);
 
   const suggestionsDiv = document.getElementById("suggestions");
@@ -205,7 +205,7 @@ function updateSuggestions() {
 
     matches.forEach(match => {
       const item = document.createElement("li");
-      item.textContent = `[${match.id}] ${match.question}`;
+      item.textContent = `[${match.id}] ${match.node}`;
       Object.assign(item.style, {
         padding: "8px",
         cursor: "pointer"
