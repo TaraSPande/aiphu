@@ -80,7 +80,7 @@ fetch('data.json')
         event.stopPropagation();
         selectedNodeId = d.id;
         nodeElements.classed("highlighted", nd => nd.id === d.id);
-        document.getElementById("node-search").value = match.node;
+        document.getElementById("node-search").value = d.node;
         // document.getElementById("qa-display").innerHTML = `
         //   <h3>${d.id}. ${d.node}</h3>
         //   <p>${d.answer}</p>
