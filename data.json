@@ -844,5 +844,53 @@
     "node": "Uniporters",
     "edges": ["140"],
     "topic": "Pharmacology"
+  },
+  {
+    "id": "146",
+    "node": "Genome Wide Association Study (GWAS)",
+    "edges": ["124"],
+    "topic": "Pharmacology"
+  },
+  {
+    "id": "147",
+    "node": "Agents",
+    "edges": ["107"],
+    "topic": "Algorithms"
+  },
+  {
+    "id": "148",
+    "node": "Quantum Computing",
+    "edges": ["111"],
+    "topic": "Algorithms"
+  },
+  {
+    "id": "149",
+    "node": "Peptides and Oligonucleotides (TIDES)",
+    "edges": ["51"],
+    "topic": "Pharmacology"
+  },
+  {
+    "id": "150",
+    "node": "Model-Informed Drug Development (MIDD)",
+    "edges": ["8"],
+    "topic": "Pharmacology"
+  },
+  {
+    "id": "151",
+    "node": "Model-Informed Precision Dosing (MIPD)",
+    "edges": ["150"],
+    "topic": "Pharmacology"
+  },
+  {
+    "id": "152",
+    "node": "Nonlinear Mixed Effect Modeling (NLMEM)",
+    "edges": ["150"],
+    "topic": "Pharmacology"
+  },
+  {
+    "id": "153",
+    "node": "Transfer Learning",
+    "edges": ["98"],
+    "topic": "Algorithms"
   }
 ]
