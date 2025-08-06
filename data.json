@@ -790,5 +790,59 @@
     "node": "Cohort Design",
     "edges": ["134"],
     "topic": "Infrastructure"
+  },
+  {
+    "id": "137",
+    "node": "Adam Optimizer",
+    "edges": ["101"],
+    "topic": "Algorithms"
+  },
+  {
+    "id": "138",
+    "node": "Transporters",
+    "edges": ["129"],
+    "topic": "Pharmacology"
+  },
+  {
+    "id": "139",
+    "node": "Passive Transport",
+    "edges": ["138"],
+    "topic": "Pharmacology"
+  },
+  {
+    "id": "140",
+    "node": "Active Transport",
+    "edges": ["138"],
+    "topic": "Pharmacology"
+  },
+  {
+    "id": "141",
+    "node": "Symporters",
+    "edges": ["140"],
+    "topic": "Pharmacology"
+  },
+  {
+    "id": "142",
+    "node": "Antiporters",
+    "edges": ["140"],
+    "topic": "Pharmacology"
+  },
+  {
+    "id": "143",
+    "node": "Influx Transporters (SLC Family)",
+    "edges": ["140"],
+    "topic": "Pharmacology"
+  },
+  {
+    "id": "144",
+    "node": "Efflux Transporters (ABC Family)",
+    "edges": ["140"],
+    "topic": "Pharmacology"
+  },
+  {
+    "id": "145",
+    "node": "Uniporters",
+    "edges": ["140"],
+    "topic": "Pharmacology"
   }
 ]
