@@ -2,96 +2,96 @@
   {
     "id": "2",
     "node": "Clearance (CL)",
-    "edges": ["13", "84", "86", "87", "88", "94"],
+    "edges": [],
     "topic": "Pharmacology"
   },
   {
     "id": "3",
     "node": "Volume of Distribution (Vd)",
-    "edges": ["13", "92"],
+    "edges": [],
     "topic": "Pharmacology"
   },
   {
     "id": "4",
-    "node": "Common Development Endpoints",
-    "edges": ["8", "78", "124"],
+    "node": "Development Endpoints",
+    "edges": [],
     "topic": "Regulation"
   },
   {
     "id": "5",
     "node": "LD50",
-    "edges": ["16"],
+    "edges": [],
     "topic": "Pharmacology"
   },
   {
     "id": "6",
-    "node": "CFR",
-    "edges": ["8", "31"],
+    "node": "Code of Federal Regulations (CFR)",
+    "edges": [],
     "topic": "Regulation"
   },
   {
     "id": "7",
-    "node": "DDI Studies",
-    "edges": ["8"],
+    "node": "Drug-Drug Interaction (DDI) Studies",
+    "edges": [],
     "topic": "Regulation"
   },
   {
     "id": "8",
     "node": "Drug Development",
-    "edges": ["4", "6", "7", "16", "17", "51", "56", "134"],
+    "edges": ["4", "6", "7"],
     "topic": "Regulation"
   },
   {
     "id": "9",
-    "node": "ADME",
-    "edges": ["11", "13"],
+    "node": "Absorption, Distribution, Metabolism, Excretion (ADME)",
+    "edges": [],
     "topic": "Pharmacology"
   },
   {
     "id": "10",
     "node": "Potency (EC50)",
-    "edges": ["14", "16", "132"],
+    "edges": [],
     "topic": "Pharmacology"
   },
   {
     "id": "11",
     "node": "Preferred Administration Methods",
-    "edges": ["9", "16"],
+    "edges": ["9"],
     "topic": "Regulation"
   },
   {
     "id": "12",
     "node": "Therapeutic Window",
-    "edges": ["14", "125"],
+    "edges": [],
     "topic": "Pharmacology"
   },
   {
     "id": "13",
-    "node": "PK",
-    "edges": ["2", "3", "9", "14", "15", "18", "20", "32"],
+    "node": "Pharmacokinetics (PK)",
+    "edges": ["2", "3", "9"],
     "topic": "Pharmacology"
   },
   {
     "id": "14",
-    "node": "PD",
-    "edges": ["10", "12", "13", "19"],
+    "node": "Pharmacodynamics (PD)",
+    "edges": ["10", "12", "13"],
     "topic": "Pharmacology"
   },
   {
     "id": "15",
     "node": "Cmax",
-    "edges": ["13", "123"],
+    "edges": ["13"],
     "topic": "Pharmacology"
   },
   {
     "id": "16",
-    "node": "IND",
+    "node": "Investigational New Drug (IND)",
     "edges": ["5", "8", "10", "11"],
     "topic": "Regulation"
   },
   {
     "id": "17",
-    "node": "NDA",
+    "node": "New Drug Application (NDA)",
     "edges": ["8"],
     "topic": "Regulation"
   },
@@ -104,43 +104,43 @@
   {
     "id": "19",
     "node": "Efficacy (Emax)",
-    "edges": ["14", "132"],
+    "edges": ["14"],
     "topic": "Pharmacology"
   },
   {
     "id": "20",
-    "node": "Half Life",
+    "node": "Half Life (t1/2)",
     "edges": ["13"],
     "topic": "Pharmacology"
   },
   {
     "id": "21",
-    "node": "VM",
-    "edges": ["27"],
+    "node": "Virtual Machine (VM)",
+    "edges": [],
     "topic": "Infrastructure"
   },
   {
     "id": "22",
-    "node": "HPC",
-    "edges": ["26", "27"],
+    "node": "High Performance Computing (HPC)",
+    "edges": [],
     "topic": "Infrastructure"
   },
   {
     "id": "23",
     "node": "Cloud Computing",
-    "edges": ["26", "27"],
+    "edges": [],
     "topic": "Infrastructure"
   },
   {
     "id": "24",
     "node": "Protected Health Information (PHI)",
-    "edges": ["31", "70"],
+    "edges": [],
     "topic": "Infrastructure"
   },
   {
     "id": "25",
     "node": "DeID OMOP",
-    "edges": ["30"],
+    "edges": [],
     "topic": "Infrastructure"
   },
   {
@@ -152,25 +152,25 @@
   {
     "id": "27",
     "node": "Information Commons (IC)",
-    "edges": ["21", "22", "23", "70"],
+    "edges": ["21", "22", "23"],
     "topic": "Infrastructure"
   },
   {
     "id": "28",
     "node": "Clinical Concepts",
-    "edges": ["69", "70"],
+    "edges": [],
     "topic": "Infrastructure"
   },
   {
     "id": "29",
     "node": "Electronic Health Records (EHR)",
-    "edges": ["70", "134"],
+    "edges": [],
     "topic": "Infrastructure"
   },
   {
     "id": "30",
-    "node": "DeID",
-    "edges": ["25", "70"],
+    "node": "Deidentified (DeID)",
+    "edges": ["25"],
     "topic": "Infrastructure"
   },
   {
@@ -181,32 +181,32 @@
   },
   {
     "id": "32",
-    "node": "AUC",
-    "edges": ["13", "33", "47", "83"],
+    "node": "Area Under Curve (AUC)",
+    "edges": ["13"],
     "topic": "Metrics"
   },
   {
     "id": "33",
     "node": "ROC Curve",
-    "edges": ["32", "34", "35", "36", "37"],
+    "edges": ["32"],
     "topic": "Metrics"
   },
   {
     "id": "34",
-    "node": "TPR",
-    "edges": ["33", "36", "38"],
+    "node": "True Positive Rate (TPR)",
+    "edges": ["33"],
     "topic": "Metrics"
   },
   {
     "id": "35",
-    "node": "FPR",
+    "node": "False Positive Rate (FPR)",
     "edges": ["33"],
     "topic": "Metrics"
   },
   {
     "id": "36",
     "node": "Sensitivity",
-    "edges": ["33", "34", "38"],
+    "edges": ["33", "34"],
     "topic": "Metrics"
   },
   {
@@ -218,25 +218,25 @@
   {
     "id": "38",
     "node": "Recall",
-    "edges": ["34", "36", "47"],
+    "edges": ["34", "36"],
     "topic": "Metrics"
   },
   {
     "id": "39",
     "node": "Precision",
-    "edges": ["47"],
+    "edges": [],
     "topic": "Metrics"
   },
   {
     "id": "40",
     "node": "Supervised Learning",
-    "edges": ["42", "44", "46", "47", "98", "135"],
+    "edges": [],
     "topic": "Algorithms"
   },
   {
     "id": "41",
     "node": "Unsupervised Learning",
-    "edges": ["43", "98", "99"],
+    "edges": [],
     "topic": "Algorithms"
   },
   {
@@ -248,7 +248,7 @@
   {
     "id": "43",
     "node": "Dimensionality Reduction",
-    "edges": ["41", "48", "49", "50"],
+    "edges": ["41"],
     "topic": "Algorithms"
   },
   {
@@ -260,19 +260,19 @@
   {
     "id": "45",
     "node": "Accuracy",
-    "edges": ["47"],
+    "edges": [],
     "topic": "Metrics"
   },
   {
     "id": "46",
     "node": "Regression",
-    "edges": ["40", "62", "63", "64", "65", "67"],
+    "edges": ["40"],
     "topic": "Algorithms"
   },
   {
     "id": "47",
     "node": "Classification",
-    "edges": ["32", "38", "39", "40", "45", "66", "68"],
+    "edges": ["32", "38", "39", "40", "45"],
     "topic": "Algorithms"
   },
   {
@@ -296,13 +296,13 @@
   {
     "id": "51",
     "node": "Drug Discovery",
-    "edges": ["8", "52", "53", "54", "55", "129"],
+    "edges": ["8"],
     "topic": "Regulation"
   },
   {
     "id": "52",
     "node": "Biologics",
-    "edges": ["51", "57"],
+    "edges": ["51"],
     "topic": "Pharmacology"
   },
   {
@@ -314,13 +314,13 @@
   {
     "id": "54",
     "node": "Agonist",
-    "edges": ["51", "58", "59", "60"],
+    "edges": ["51"],
     "topic": "Pharmacology"
   },
   {
     "id": "55",
     "node": "Antagonist",
-    "edges": ["51", "61"],
+    "edges": ["51"],
     "topic": "Pharmacology"
   },
   {
@@ -349,7 +349,7 @@
   },
   {
     "id": "60",
-    "node": "Specificity (binding)",
+    "node": "Binding Specificity",
     "edges": ["54"],
     "topic": "Pharmacology"
   },
@@ -385,7 +385,7 @@
   },
   {
     "id": "66",
-    "node": "F1",
+    "node": "F1 Score",
     "edges": ["47"],
     "topic": "Metrics"
   },
@@ -404,7 +404,7 @@
   {
     "id": "69",
     "node": "Clinical Notes",
-    "edges": ["28", "70"],
+    "edges": ["28"],
     "topic": "Infrastructure"
   },
   {
@@ -416,19 +416,19 @@
     {
     "id": "71",
     "node": "Homeostasis",
-    "edges": ["73", "76"],
+    "edges": [],
     "topic": "Physiology"
   },
   {
     "id": "72",
     "node": "Allostasis",
-    "edges": ["76"],
+    "edges": [],
     "topic": "Physiology"
   },
   {
     "id": "73",
     "node": "Reflex Circuit",
-    "edges": ["71", "74", "75"],
+    "edges": ["71"],
     "topic": "Physiology"
   },
   {
@@ -446,13 +446,13 @@
   {
     "id": "76",
     "node": "Physiologic Reserve",
-    "edges": ["71", "72", "77", "79", "80", "81", "82"],
+    "edges": ["71", "72"],
     "topic": "Physiology"
   },
   {
     "id": "77",
     "node": "Mechanisms of Disease",
-    "edges": ["76", "78"],
+    "edges": ["76"],
     "topic": "Physiology"
   },
   {
@@ -488,7 +488,7 @@
   {
     "id": "83",
     "node": "Hepatic Bioavailability (Fʜ)",
-    "edges": ["32", "88"],
+    "edges": ["32"],
     "topic": "Pharmacology"
   },
   {
@@ -499,8 +499,8 @@
   },
   {
     "id": "85",
-    "node": "C(0)",
-    "edges": ["123"],
+    "node": "Initial Concentration [C(0)]",
+    "edges": [],
     "topic": "Pharmacology"
   },
   {
@@ -518,37 +518,37 @@
   {
     "id": "88",
     "node": "Hepatic Clearance (CLʜ)",
-    "edges": ["2", "83", "89", "90", "91"],
+    "edges": ["2", "83"],
     "topic": "Pharmacology"
   },
   {
     "id": "89",
     "node": "Hepatic Blood Flow (Qʙ)",
-    "edges": ["88", "96"],
+    "edges": ["88"],
     "topic": "Pharmacology"
   },
   {
     "id": "90",
     "node": "Intrinsic Clearance (CLɪ)",
-    "edges": ["88", "97"],
+    "edges": ["88"],
     "topic": "Pharmacology"
   },
   {
     "id": "91",
     "node": "Fraction Unbound (fᵤ)",
-    "edges": ["88", "93"],
+    "edges": ["88"],
     "topic": "Pharmacology"
   },
   {
     "id": "92",
     "node": "Major Plasma Binding Proteins",
-    "edges": ["3", "93"],
+    "edges": ["3"],
     "topic": "Pharmacology"
   },
   {
     "id": "93",
     "node": "Protein Binding",
-    "edges": ["91", "92", "95"],
+    "edges": ["91", "92"],
     "topic": "Pharmacology"
   },
   {
@@ -558,33 +558,15 @@
     "topic": "Pharmacology"
   },
   {
-    "id": "95",
-    "node": "Factors that affect Plasma Protein (fᵤ) + Tissue Binding (fᵤₜ)",
-    "edges": ["93"],
-    "topic": "Pharmacology"
-  },
-  {
-    "id": "96",
-    "node": "Factors that affect Qʙ",
-    "edges": ["89"],
-    "topic": "Pharmacology"
-  },
-  {
-    "id": "97",
-    "node": "Factors that affect CLɪ",
-    "edges": ["90"],
-    "topic": "Pharmacology"
-  },
-  {
     "id": "98",
     "node": "Machine Learning (ML)",
-    "edges": ["40", "41", "101", "111"],
+    "edges": ["40", "41"],
     "topic": "Algorithms"
   },
   {
     "id": "99",
     "node": "Clustering",
-    "edges": ["41", "100"],
+    "edges": ["41"],
     "topic": "Algorithms"
   },
   {
@@ -596,7 +578,7 @@
   {
     "id": "101",
     "node": "Deep Learning (DL)",
-    "edges": ["98", "102", "103", "104", "105", "106", "114", "115"],
+    "edges": ["98"],
     "topic": "Algorithms"
   },
   {
@@ -608,31 +590,31 @@
   {
     "id": "103",
     "node": "CNN",
-    "edges": ["101", "113"],
+    "edges": ["101"],
     "topic": "Algorithms"
   },
   {
     "id": "104",
     "node": "RNN",
-    "edges": ["101", "112"],
+    "edges": ["101"],
     "topic": "Algorithms"
   },
   {
     "id": "105",
     "node": "Transformers",
-    "edges": ["101", "107"],
+    "edges": ["101"],
     "topic": "Algorithms"
   },
   {
     "id": "106",
     "node": "Autoencoders",
-    "edges": ["101", "110"],
+    "edges": ["101"],
     "topic": "Algorithms"
   },
   {
     "id": "107",
     "node": "LLMs",
-    "edges": ["105", "108", "109"],
+    "edges": ["105"],
     "topic": "Algorithms"
   },
   {
@@ -668,19 +650,19 @@
   {
     "id": "113",
     "node": "Downsampling",
-    "edges": ["103", "116"],
+    "edges": ["103"],
     "topic": "Algorithms"
   },
   {
     "id": "114",
     "node": "Activation Functions",
-    "edges": ["101", "117", "118", "119"],
+    "edges": ["101"],
     "topic": "Algorithms"
   },
   {
     "id": "115",
     "node": "Regularization",
-    "edges": ["101", "120", "121", "122"],
+    "edges": ["101"],
     "topic": "Algorithms"
   },
   {
@@ -734,13 +716,13 @@
   {
     "id": "124",
     "node": "Drug Response",
-    "edges": ["4", "126", "127"],
+    "edges": ["4"],
     "topic": "Pharmacology"
   },
   {
     "id": "125",
-    "node": "Therapeutic Index",
-    "edges": ["12", "128"],
+    "node": "Therapeutic Index (TI)",
+    "edges": ["12"],
     "topic": "Pharmacology"
   },
   {
@@ -764,13 +746,13 @@
   {
     "id": "129",
     "node": "Drug Permeability",
-    "edges": ["51", "130"],
+    "edges": ["51"],
     "topic": "Pharmacology"
   },
   {
     "id": "130",
     "node": "Drug Partitioning",
-    "edges": ["129", "131"],
+    "edges": ["129"],
     "topic": "Pharmacology"
   },
   {
@@ -782,7 +764,7 @@
   {
     "id": "132",
     "node": "Measurement of Disease",
-    "edges": ["10", "19", "133"],
+    "edges": ["10", "19"],
     "topic": "Pharmacology"
   },
   {
@@ -794,7 +776,7 @@
   {
     "id": "134",
     "node": "Retrospective Studies",
-    "edges": ["8", "29", "135", "136"],
+    "edges": ["8", "29"],
     "topic": "Regulation"
   },
   {
