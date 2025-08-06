@@ -9,7 +9,7 @@ const zoom = d3.zoom()
 svg.call(zoom);
 
 function resetView() {
-  const zoomOutScale = 0.5;
+  const zoomOutScale = 0.25;
   const centerX = width / 2;
   const centerY = height / 2;
   const transform = d3.zoomIdentity
