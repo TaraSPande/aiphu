@@ -18,6 +18,13 @@ svg {
   overflow-y: auto;
 }
 
+#search-container {
+  display: flex; 
+  gap: 8px; 
+  align-items: center; 
+  max-width: 400px;
+}
+
 #qa-display { 
     border: 1px solid #ccc; 
     padding: 2rem; 
