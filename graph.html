@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Flashcard Knowledge Graph</title>
+  <title>AI-Pharma Flashcards</title>
   <script src="https://d3js.org/d3.v7.min.js"></script>
   <link rel="stylesheet" href="graph.css">
   <script>
@@ -17,7 +17,7 @@
   <svg id="graph" width="800" height="800"></svg>
 
   <div id="info-panel">
-    <h2>Flashcard Knowledge Graph</h2>
+    <h2>AI-Pharma Flashcards</h2>
 
     <label for="subtopic-filter">Filter by Subtopic:</label><br>
     <select id="subtopic-filter">
@@ -26,10 +26,20 @@
 
     <div id="legend" style="margin-top: 10px;"></div>
 
-    <label for="node-search" style="margin-top: 20px; display: block;">Search node:</label><br>
+    <div id="search-container">
+      <input id="node-search" placeholder="Search node..." oninput="updateSuggestions()"
+         style="flex: 1; padding: 6px; height: 36px; box-sizing: border-box; 
+                border: 1px solid #ccc; margin: 0;" />
+      <button onclick="searchNode()"
+          style="padding: 6px 12px; height: 36px; box-sizing: border-box; 
+                 border: 1px solid #ccc; margin: 0;">🔍</button>
+    </div>
+    <div id="suggestions"></div>
+
+<!--     <label for="node-search" style="margin-top: 20px; display: block;">Search node:</label><br>
     <input type="text" id="node-search" placeholder="Search by question or ID" style="width: 50%; padding: 6px;" oninput="updateSuggestions()" autocomplete="off" />
     <div id="suggestions" style="position: relative;"></div>
-    <button onclick="searchNode()">🔍 Search</button>
+    <button onclick="searchNode()">🔍 Search</button> -->
 
     <div id="qa-display" style="margin-top: 20px;">
       <p>Click on a node to see its question and answer.</p>
