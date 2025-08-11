@@ -103,6 +103,7 @@ fetch('flashcards.json')
         <p>Click on a node to see its question and answer.</p>
       `;
       document.getElementById("suggestions").innerHTML = "";
+      document.getElementById("node-search").value = "";
     });
 
     simulation.on("tick", () => {
