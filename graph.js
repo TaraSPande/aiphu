@@ -83,7 +83,7 @@ fetch('flashcards.json')
         selectedNodeId = d.id;
         nodeElements.classed("highlighted", nd => nd.id === d.id);
         document.getElementById("qa-display").innerHTML = `
-          <h3>${d.id}. ${d.question}</h3>
+          <h3>${d.question}</h3>
           <p>${d.answer}</p>
         `;
         MathJax.typesetPromise();
@@ -167,9 +167,7 @@ function searchNode() {
 
     // Show QA panel
     document.getElementById("qa-display").innerHTML = `
-      <h3>Question (ID: ${match.id})</h3>
-      <p>${match.question}</p>
-      <h3>Answer</h3>
+      <h3>${match.question}</h3>
       <p>${match.answer}</p>
     `;
     MathJax.typesetPromise();
@@ -208,11 +206,11 @@ function updateSuggestions() {
     list.style.border = "1px solid #ccc";
     list.style.position = "absolute";
     list.style.zIndex = "10";
-    list.style.width = "100%";
+    list.style.width = "80%";
 
     matches.forEach(match => {
       const item = document.createElement("li");
-      item.textContent = `[${match.id}] ${match.question}`;
+      item.textContent = `${match.question}`;
       item.style.padding = "8px";
       item.style.cursor = "pointer";
       item.addEventListener("click", () => {
