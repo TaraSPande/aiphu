@@ -34,7 +34,7 @@ svg {
   display: flex; 
   gap: 8px; 
   align-items: center; 
-  max-width: 400px;
+  max-width: 330px;
 }
 
 #qa-display { 
