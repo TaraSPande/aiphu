@@ -214,7 +214,26 @@ function updateSuggestions() {
       item.style.padding = "8px";
       item.style.cursor = "pointer";
       item.addEventListener("click", () => {
-        document.getElementById("node-search").value = match.id;
+        // document.getElementById("node-search").value = match.id;
+        nodeElements.classed("highlighted", d => d.id === match.id);
+
+        // Show QA panel
+        document.getElementById("qa-display").innerHTML = `
+          <h3>${match.question}</h3>
+          <p>${match.answer}</p>
+        `;
+        MathJax.typesetPromise();
+    
+        // Zoom to it smoothly
+        const scale = 1.5;
+        const transform = d3.zoomIdentity
+          .translate(width / 2 - match.x * scale, height / 2 - match.y * scale)
+          .scale(scale);
+    
+        svg.transition()
+          .duration(750)
+          .call(zoom.transform, transform);
+        
         suggestionsDiv.innerHTML = "";
       });
       list.appendChild(item);
