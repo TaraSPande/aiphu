@@ -19,12 +19,12 @@
   <div id="info-panel">
     <h2>AI-Pharma Flashcards</h2>
 
-    <label for="subtopic-filter">Filter by Subtopic:</label><br>
-    <select id="subtopic-filter">
+<!--     <label for="subtopic-filter">Filter by Subtopic:</label><br> -->
+<!--     <select id="subtopic-filter">
       <option value="all">All</option>
     </select>
 
-    <div id="legend" style="margin-top: 10px;"></div>
+    <div id="legend" style="margin-top: 10px;"></div> -->
 
     <div id="search-container">
       <input id="node-search" placeholder="Search node..." oninput="updateSuggestions()"
@@ -47,6 +47,9 @@
 
     <button onclick="resetView()">Reset View</button>
     <button onclick="location.href='flashcard.html'">Go to Flashcard Shuffle</button>
+    <select id="subtopic-filter">
+      <option value="all">All</option>
+    </select>
   </div>
 
   <script src="graph.js"></script>
