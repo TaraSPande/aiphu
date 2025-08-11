@@ -40,7 +40,8 @@ svg {
 #qa-display { 
     border: 1px solid #ccc; 
     padding: 1rem; 
-    width: 80%; 
+    width: 85%; 
+    height: 300px;
 }
 
 .node {
