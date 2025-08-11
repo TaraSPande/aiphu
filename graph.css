@@ -39,8 +39,8 @@ svg {
 
 #qa-display { 
     border: 1px solid #ccc; 
-    padding: 2rem; 
-    width: 50%; 
+    padding: 1rem; 
+    width: 80%; 
 }
 
 .node {
