@@ -40,8 +40,8 @@ svg {
 #qa-display { 
     border: 1px solid #ccc; 
     padding: 1rem; 
-    width: 85%; 
-    height: 245px;
+    width: 95%; 
+    height: 250px;
     overflow-y: auto;   /* Enables vertical scroll if content exceeds height */
     box-sizing: border-box; /* Prevent padding from increasing total height */
 }
