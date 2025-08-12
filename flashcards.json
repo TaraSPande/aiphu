@@ -8,7 +8,7 @@
           {"id": "12220", "question": "Gene Therapies", "answer": "Treatments delivering genetic material to modify or replace faulty genes.", "links": ["12200"], "subtopic": "Regulation"},
       {"id": "12300", "question": "TIDES", "answer": "Therapeutics based on peptides and oligonucleotides (nucleic acids).", "links": ["12000"], "subtopic": "Regulation"},
 
-  {"id": "20000", "question": "Drug Development", "answer": "The process of evaluating our lead therapeutic for efficacy and toxicity.", "links": ["10000"], "subtopic": "Regulation"},
+  {"id": "20000", "question": "Drug Development", "answer": "The process of evaluating our lead therapeutic for efficacy and toxicity: preclinical, clinical trials, FDA submission and approval, post-marketing studies.", "links": ["10000"], "subtopic": "Regulation"},
       {"id": "21000", "question": "Preclinical", "answer": "Lab and animal testing (one small like mice and one large like dogs) to evaluate safety, mechanism, and pharmacology before human trials. <p>Afterwards, file an Investigational New Drug (IND) to begin clinical trials.</p>", "links": ["20000"], "subtopic": "Regulation"},
       {"id": "22000", "question": "Clinical Trials", "answer": "Human testing to evaluate safety and efficacy, conducted in phases.", "links": ["20000"], "subtopic": "Regulation"},
           {"id": "22100", "question": "Phase 1", "answer": "First-in-human, small group; focuses on safety, dosage, and pharmacokinetics.", "links": ["22000"], "subtopic": "Regulation"},
@@ -71,7 +71,7 @@
           {"id": "46100", "question": "BERT", "answer": "A encoder-only, bi-directional transformer trained for masked language modeling and next sentence prediction; strong at understanding text context.", "links": ["46000"], "subtopic": "Machine Learning"},
           {"id": "46200", "question": "GPT", "answer": "A decoder-only, unidirectional transformer trained for next-token prediction; excels at coherent text generation.", "links": ["46000"], "subtopic": "Machine Learning"},
 
-  {"id": "50000", "question": "Pharmacokinetics", "answer": "What the body does to the drug: absorption, distribution, metabolism, excretion (ADME).", "links": [], "subtopic": "Pharmacology"},
+  {"id": "50000", "question": "Pharmacokinetics", "answer": "What the body does to the drug: absorption, distribution, metabolism, excretion (ADME).", "links": ["22100"], "subtopic": "Pharmacology"},
       {"id": "51000", "question": "ADME", "answer": "Absorption, Distribution, Metabolism, Excretion.", "links": ["50000"], "subtopic": "Pharmacology"},
           {"id": "51100", "question": "Absorption", "answer": "The process by which the drug enters the bloodstream from its site of administration (e.g., orally ingested, injected, inhaled).", "links": ["51000"], "subtopic": "Pharmacology"},
           {"id": "51200", "question": "Distribution", "answer": "The drug is distributed throughout the body's tissues and organs via the bloodstream. The goal is to reach the drug's target site at an effective concentration.", "links": ["51000"], "subtopic": "Pharmacology"},
@@ -87,7 +87,7 @@
           {"id": "53400", "question": "Intrinsic Clearance (CLɪ)", "answer": "Inherint ability of organ (usually referring to liver) to clear the drug without limitations from bloodflow/binding.<ul><li>High $CL_I \\rightarrow$ High $E_H$</li><li>Low $CL_I \\rightarrow$ Low $E_H$</li></ul>", "links": ["53000"], "subtopic": "Pharmacology"},
       {"id": "54000", "question": "Half Life", "answer": "The time it takes for the drug concentration to decrease to half of its initial amount in the body.<p>$t_{1/2} = \\frac{\\ln(2)*V_d}{CL}$</p>", "links": ["50000"], "subtopic": "Pharmacology"},
       {"id": "55000", "question": "Steady State", "answer": "At steady state, rate in = rate out. In other words, infusion rate (dosage rate) = rate of elimination ($CL \\cdot C$).</p><p>$R_{in} = CL*C_{ss}$</p>", "links": ["50000"], "subtopic": "Pharmacology"},
-  {"id": "60000", "question": "Pharacodynamics", "answer": "What the drug does to the body.", "links": ["50000"], "subtopic": "Pharmacology"},
+  {"id": "60000", "question": "Pharacodynamics", "answer": "What the drug does to the body.", "links": ["50000", "22200"], "subtopic": "Pharmacology"},
       {"id": "61000", "question": "Potency (EC50)", "answer": "The amount of drug needed to produce a specific effect. It's a measure of the drug's power.<p>Measured with Efficacy-Concentration 50 (EC50 or C50): drug concentration that produces 50% of its maximum effect.</p>", "links": ["60000"], "subtopic": "Pharmacology"},
       {"id": "62000", "question": "Efficacy (Emax)", "answer": "The maximum response or effect a drug can produce, regardless of the dosage, represented by Emax.<ul><li>More specifically, E(0) is the baseline measurement and Emax is the maximum drug effect over baseline.</li></ul>", "links": ["60000"], "subtopic": "Pharmacology"},
       {"id": "63000", "question": "Therapeutic Window", "answer": "The concentration between efficacy (low end) and toxicity (high end) on a concentration vs time graph. <ul><li>Small therapeutic windows require more careful dosing.</li></ul>", "links": ["60000"], "subtopic": "Pharmacology"}
