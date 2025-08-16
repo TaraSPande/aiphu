@@ -148,6 +148,26 @@
                                   "id": "211226", "question": "ROC Curve", "links": ["211220"], "subtopic": "Machine Learning",
                                   "answer": "Used to evaluate the performance of a binary classifier by plotting TPR (y) vs. FPR (x) at various classification thresholds. <ul><li>The model is classifying well if TPR is high and FPR is low in general.</li></ul>"
                                 },
+                          {
+                            "id": "211230", "question": "SVM", "links": ["211200"], "subtopic": "Machine Learning",
+                            "answer": "Support Vector Machines separate classes by finding the hyperplane with the maximum margin, and can handle nonlinear problems using kernel functions.<p>SVMs can also be adapted for regression tasks through a variant called Support Vector Regression (SVR).</p>"
+                          },
+                          {
+                            "id": "211240", "question": "KNN", "links": ["211200"], "subtopic": "Machine Learning",
+                            "answer": "K-Nearest Neighbors classifies or predicts values by looking at the majority (or average) of the k closest data points in feature space; simple but can be slow with large datasets.<p>KNNs can be adapted for regression by taking the average of the K nearest neighbors' values to predict a continuous outcome.</p>"
+                          },
+                    {
+                      "id": "211300", "question": "Decision Trees", "links": ["211000"], "subtopic": "Machine Learning",
+                      "answer": "Models that split data recursively based on feature thresholds, forming a tree of “if–then” rules to make predictions. <p>These algorithms are used for both classification and regression tasks.</p>"
+                    },
+                          {
+                            "id": "211310", "question": "Random Forest", "links": ["211300"], "subtopic": "Machine Learning",
+                            "answer": "An ensemble of decision trees trained on random subsets of data and features; predictions are averaged (regression) or majority-voted (classification).<p>Random Forest reduces variance via averaging many trees in parallel.</p>"
+                          },
+                          {
+                            "id": "211320", "question": "Gradient Boosting", "links": ["211300"], "subtopic": "Machine Learning",
+                            "answer": "Builds trees sequentially, each new tree correcting errors of the previous ones by optimizing a loss function with gradient descent.<p>Gradient Boosting reduces bias by adding trees sequentially in a corrective manner.</p>"
+                          },
               {
                 "id": "212000", "question": "Unsupervised Learning", "links": ["210000"], "subtopic": "Machine Learning",
                 "answer": "Let the model find hidden patterns on its own without labeled data."
@@ -276,6 +296,34 @@
                                   "id": "214612", "question": "GPT", "links": ["214610"], "subtopic": "Machine Learning",
                                   "answer": "A decoder-only, unidirectional transformer trained for next-token prediction; excels at coherent text generation."
                                 },
+              {
+                "id": "215000", "question": "Transfer Learning", "links": ["210000"], "subtopic": "Machine Learning",
+                      "answer": "Using knowledge gained from one task/domain to improve performance on another.<p>Fine-tuning is one form of transfer learning, but transfer learning can also mean freezing features and just training a classifier on top.</p>"
+              },
+                    {
+                      "id": "215100", "question": "Finetuning", "links": ["215000"], "subtopic": "Machine Learning",
+                      "answer": "Training a pretrained model further on a smaller, task-specific dataset."
+                    },
+                    {
+                      "id": "215200", "question": "Distillation", "links": ["215000"], "subtopic": "Machine Learning",
+                      "answer": "Training a smaller 'student' model to mimic a larger 'teacher' model. The student learns not just from ground-truth labels, but from the teacher’s softer probability outputs."
+                    },
+              {
+                "id": "216000", "question": "Semi-supervised Learning", "links": ["210000"], "subtopic": "Machine Learning",
+                "answer": "Training with a small amount of labeled data and a large amount of unlabeled data."
+              },
+              {
+                "id": "217000", "question": "Self-supervised Learning", "links": ["210000"], "subtopic": "Machine Learning",
+                "answer": "A training strategy where the model learns from unlabeled data by creating its own supervision signals (e.g., predicting hidden or transformed parts of the input)."
+              },
+                    {
+                      "id": "217100", "question": "Masked Language Modeling (MLM)", "links": ["217000"], "subtopic": "Machine Learning",
+                      "answer": "A self-supervised task where some words in a sentence are masked and the model learns to predict them from context, as used in BERT pretraining."
+                    },
+                    {
+                      "id": "217200", "question": "Autoregressive Modeling", "links": ["217000"], "subtopic": "Machine Learning",
+                      "answer": "A self-supervised training method where the model predicts the next token in a sequence given all previous tokens (used in GPT-style models).<p>Unlike MLM which learns bidirectional context, autoregressive learns left-to-right (causal) dependencies making it better for generation."
+                    },
 
   {
     "id": "300000", "question": "Pharmacology", "links": [], "subtopic": "Pharmacology",
