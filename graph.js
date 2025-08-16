@@ -69,11 +69,12 @@ fetch('flashcards.json')
       .data(allNodes)
       .join("circle")
       .attr("r", d => {
-        if (/0000$/.test(d.id)) return 20; // top-level
-        if (/000$/.test(d.id)) return 15;  // second level
-        if (/00$/.test(d.id)) return 10;   // third level
-        if (/0$/.test(d.id)) return 8;     // fourth level
-        return 5;                          // leaf node
+        if (/00000$/.test(d.id)) return 30; //top-level
+        if (/0000$/.test(d.id)) return 22;  // second level
+        if (/000$/.test(d.id)) return 15;   // third level
+        if (/00$/.test(d.id)) return 10;    // fourth level
+        if (/0$/.test(d.id)) return 8;      // fifth level
+        return 5;                           // leaf node
       })
       .attr("fill", d => color(d.subtopic))
       .attr("class", "node")
