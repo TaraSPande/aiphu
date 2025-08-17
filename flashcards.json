@@ -36,7 +36,7 @@
                       "answer": "Therapeutics based on peptides and oligonucleotides (nucleic acids)."
                     },
         {
-          "id": "120000", "question": "Preclinical", "links": ["100000"], "subtopic": "Regulation",
+          "id": "120000", "question": "Preclinical (IND)", "links": ["100000"], "subtopic": "Regulation",
           "answer": "Lab and animal testing (one small like mice and one large like dogs) to evaluate safety, mechanism, and pharmacology before human trials. <p>Afterwards, file an Investigational New Drug (IND) to begin clinical trials.</p>"
         },
         {
@@ -56,7 +56,7 @@
                 "answer": "Large-scale trials to confirm efficacy, monitor adverse reactions, and compare to standard treatments. Evaluate clinical endpoints."
               },
         {
-          "id": "140000", "question": "FDA Submission & Approval", "links": ["100000"], "subtopic": "Regulation",
+          "id": "140000", "question": "FDA Submission & Approval (NDA)", "links": ["100000"], "subtopic": "Regulation",
           "answer": "Submit a New Drug Application (NDA) to initiate regulatory review of clinical trial data and manufacturing before market authorization."
         },
         {
@@ -361,6 +361,10 @@
                       "id": "311100", "question": "Absorption", "links": ["311000"], "subtopic": "Pharmacology",
                       "answer": "The process by which the drug enters the bloodstream from its site of administration (e.g., orally ingested, injected, inhaled)."
                     },
+                          {
+                            "id": "311110", "question": "Administration Methods", "links": ["311100"], "subtopic": "Pharmacology",
+                            "answer": "<ul><li>Oral (most preferred): drug passes through the digestive system</li><li>IV Bolus Injection: rapid injection, typically delivered within seconds to a few minutes</li><li>IV Infusion: delivered slowly and steadily over a longer period, ranging from 30 to 60 minutes, and sometimes even several hours or days</li></ul>"
+                          },
                     {
                       "id": "311200", "question": "Distribution", "links": ["311000"], "subtopic": "Pharmacology",
                       "answer": "The drug is distributed throughout the body's tissues and organs via the bloodstream. The goal is to reach the drug's target site at an effective concentration."
