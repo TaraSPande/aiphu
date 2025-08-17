@@ -196,6 +196,18 @@
                             "id": "212130", "question": "t-SNE", "links": ["212100"], "subtopic": "Machine Learning",
                             "answer": "Nonlinear method emphasizing local structure, making similar points appear close in visualization."
                           },
+                          {
+                            "id": "212140", "question": "SVD", "links": ["212100"], "subtopic": "Machine Learning",
+                            "answer": "Singular Value Decomposition (SVD) is a powerful matrix factorization technique used in machine learning to decompose a matrix into three other matrices, revealing key structural aspects of the original data."
+                          },
+                          {
+                            "id": "212150", "question": "Feature Selection", "links": ["212100"], "subtopic": "Machine Learning",
+                            "answer": "Aims to identify and select the most relevant features from a dataset, effectively reducing the number of input variables while retaining the most important information."
+                          },
+                                {
+                                  "id": "212151", "question": "Feature Importance", "links": ["212150"], "subtopic": "Machine Learning",
+                                  "answer": "The process of quantifying the contribution or relevance of each input feature to the predictions or performance of a machine learning model. It assigns a score to each feature, indicating how much influence it has on the model's output."
+                                },
                     {
                       "id": "212200", "question": "Clustering", "links": ["212000"], "subtopic": "Machine Learning",
                       "answer": "Groups data points into clusters based on similarity, without prior knowledge of cluster labels."
@@ -203,6 +215,18 @@
                           {
                             "id": "212210", "question": "K-means", "links": ["212200"], "subtopic": "Machine Learning",
                             "answer": "Clustering algorithm that partitions data into k groups by minimizing within-cluster distance to the centroid."
+                          },
+                    {
+                      "id": "212300", "question": "Self-supervised Learning", "links": ["212000"], "subtopic": "Machine Learning",
+                      "answer": "A training strategy where the model learns from unlabeled data by creating its own supervision signals (e.g., predicting hidden or transformed parts of the input)."
+                    },
+                          {
+                            "id": "212310", "question": "Masked Language Modeling (MLM)", "links": ["212300"], "subtopic": "Machine Learning",
+                            "answer": "A self-supervised task where some words in a sentence are masked and the model learns to predict them from context, as used in BERT pretraining."
+                          },
+                          {
+                            "id": "212320", "question": "Autoregressive Modeling", "links": ["212300"], "subtopic": "Machine Learning",
+                            "answer": "A self-supervised training method where the model predicts the next token in a sequence given all previous tokens (used in GPT-style models).<p>Unlike MLM which learns bidirectional context, autoregressive learns left-to-right (causal) dependencies making it better for generation."
                           },
               {
                 "id": "213000", "question": "Hyperparameters", "links": ["210000"], "subtopic": "Machine Learning",
@@ -320,18 +344,6 @@
                 "id": "216000", "question": "Semi-supervised Learning", "links": ["210000"], "subtopic": "Machine Learning",
                 "answer": "Training with a small amount of labeled data and a large amount of unlabeled data."
               },
-              {
-                "id": "217000", "question": "Self-supervised Learning", "links": ["210000"], "subtopic": "Machine Learning",
-                "answer": "A training strategy where the model learns from unlabeled data by creating its own supervision signals (e.g., predicting hidden or transformed parts of the input)."
-              },
-                    {
-                      "id": "217100", "question": "Masked Language Modeling (MLM)", "links": ["217000"], "subtopic": "Machine Learning",
-                      "answer": "A self-supervised task where some words in a sentence are masked and the model learns to predict them from context, as used in BERT pretraining."
-                    },
-                    {
-                      "id": "217200", "question": "Autoregressive Modeling", "links": ["217000"], "subtopic": "Machine Learning",
-                      "answer": "A self-supervised training method where the model predicts the next token in a sequence given all previous tokens (used in GPT-style models).<p>Unlike MLM which learns bidirectional context, autoregressive learns left-to-right (causal) dependencies making it better for generation."
-                    },
 
   {
     "id": "300000", "question": "Pharmacology", "links": [], "subtopic": "Pharmacology",
