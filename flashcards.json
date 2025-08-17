@@ -39,6 +39,14 @@
           "id": "120000", "question": "Preclinical (IND)", "links": ["100000"], "subtopic": "Regulation",
           "answer": "Lab and animal testing (one small like mice and one large like dogs) to evaluate safety, mechanism, and pharmacology before human trials. <p>Afterwards, file an Investigational New Drug (IND) to begin clinical trials.</p>"
         },
+              {
+                "id": "121000", "question": "LD50", "links": ["120000"], "subtopic": "Regulation",
+                "answer": "Lethal Dose 50: dosage of the drug where 50% do not survive."
+              },
+                    {
+                      "id": "122000", "question": "Humanization", "links": ["120000"], "subtopic": "Regulation",
+                      "answer": "The process of modifying laboratory mice so that they more closely resemble humans, primarily in their immune system or other biological systems. <p>This involves introducing human genes, cells, or tissues into the mice, allowing researchers to study human-specific diseases and therapies in a more relevant preclinical model.</p>"
+                    },
         {
           "id": "130000", "question": "Clinical Trials", "links": ["100000"], "subtopic": "Regulation",
           "answer": "Human testing to evaluate safety and efficacy, conducted in phases."
@@ -55,6 +63,10 @@
                 "id": "133000", "question": "Phase 3", "links": ["130000"], "subtopic": "Regulation",
                 "answer": "Large-scale trials to confirm efficacy, monitor adverse reactions, and compare to standard treatments. Evaluate clinical endpoints."
               },
+                    {
+                      "id": "133100", "question": "Endpoints", "links": ["133000"], "subtopic": "Regulation",
+                      "answer": "<ul><li>Overall survival of patients (traditional endpoint)</li><li>Progression free survival: time patient lives with disease without it worsening</li><li>Durable complete response: complete disappearance of all cancer</li><li>Palliation: reduction in tumor symptoms</li></ul>"
+                    },
         {
           "id": "140000", "question": "FDA Submission & Approval (NDA)", "links": ["100000"], "subtopic": "Regulation",
           "answer": "Submit a New Drug Application (NDA) to initiate regulatory review of clinical trial data and manufacturing before market authorization."
@@ -70,6 +82,14 @@
               {
                 "id": "152000", "question": "DDI Studies", "links": ["150000"], "subtopic": "Regulation",
                 "answer": "Experiments or analyses assessing how one drug affects the pharmacokinetics or pharmacodynamics of another."
+              },
+        {
+          "id": "160000", "question": "Code of Federal Regulations (CFR) Title 21", "links": ["100000"], "subtopic": "Regulation",
+          "answer": "Outlines the regulations that govern the safety, efficacy, and quality of pharmaceutical products in the United States. It dictates how drugs are researched, developed, manufactured, and distributed, ensuring they are safe for public use and meet quality standards."
+        },
+              {
+                "id": "161000", "question": "Institutional Review Board (IRB)", "links": ["160000"], "subtopic": "Regulation",
+                "answer": "Institutional Review Board: a committee that reviews and approves research involving human subjects to ensure ethical and safe practices."
               },
 
   {
@@ -417,6 +437,10 @@
                 "id": "315000", "question": "Steady State", "links": ["310000"], "subtopic": "Pharmacology",
                 "answer": "At steady state, rate in = rate out. In other words, infusion rate (dosage rate) = rate of elimination ($CL \\cdot C$).</p><p>$R_{in} = CL*C_{ss}$</p>"
               },
+                    {
+                      "id": "315100", "question": "Rate of Elimination", "links": ["315000"], "subtopic": "Pharmacology",
+                      "answer": "$CL \\cdot C$"
+                    },
               {
                 "id": "316000", "question": "Bioavailability", "links": ["310000"], "subtopic": "Pharmacology",
                 "answer": "Fraction (between 0 and 1) of drug absorbed into the systemic circulation.<p>$F = \\frac{AUC_{oral}}{AUC_{iv}}$</p>"
@@ -425,14 +449,18 @@
                       "id": "316100", "question": "AUC", "links": ["316000"], "subtopic": "Pharmacology",
                       "answer": "$AUC = \\frac{Dose}{CL}$"
                     },
+              {
+                "id": "317000", "question": "Dosage", "links": ["310000"], "subtopic": "Pharmacology",
+                "answer": "$\\text{Amount} = V \\cdot C$<p>$\\text{Dosage} = V \\cdot C(0)$</p>"
+              },
         
         {
           "id": "320000", "question": "Pharacodynamics", "links": ["300000"], "subtopic": "Pharmacology",
           "answer": "What the drug does to the body."
         },
               {
-                "id": "321000", "question": "Potency (EC50)", "links": ["320000"], "subtopic": "Pharmacology",
-                "answer": "The amount of drug needed to produce a specific effect. It's a measure of the drug's power.<p>Measured with Efficacy-Concentration 50 (EC50 or C50): drug concentration that produces 50% of its maximum effect.</p>"
+                "id": "321000", "question": "Potency (EC50/ED50)", "links": ["320000"], "subtopic": "Pharmacology",
+                "answer": "The amount of drug needed to produce a specific effect. It's a measure of the drug's power.<p>Measured with Efficacy-Concentration 50 (EC50 or C50): drug concentration that produces 50% of its maximum effect.</p><p>Median Effective Dose (ED50): The dose of a drug that produces a desired therapeutic effect in 50% of the population being studied.</p>"
               },
               {
                 "id": "322000", "question": "Efficacy (Emax)", "links": ["320000"], "subtopic": "Pharmacology",
