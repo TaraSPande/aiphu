@@ -1,947 +1,554 @@
 [
   {
-    "id": "2",
-    "question": "Clearance (CL)",
-    "answer": "Drug elimination efficiency: the efficiency of the body at irreversibly removing the drug from blood plasma.<ul><li>Definition: $CL=Q \\frac{C_A-C_V}{C_A} = Q*E$</li><li>Different types: Renal, Hepatic, Others (often negligible)</li><li>We generally say: $CL = CL_R + CL_H$</li></ul>",
-    "links": ["13", "84", "86", "87", "88", "94"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "3",
-    "question": "Volume of Distribution (Vd)",
-    "answer": "Total amount of drug in the body divided by the concentration in the bloodstream. <ul><li>High Vd suggests the drug is distributed widely throughout the body.</li><li>Lower Vd indicates the drug is mostly confined to the blood plasma</li><li>$V_d = V_P + \\frac{f_u * V_T}{f_{ut}}$ (but $V_P$ negligible if $V_d > 40$ L)</li></ul>",
-    "links": ["13", "92"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "4",
-    "question": "Common Development Endpoints",
-    "answer": "<ul><li>Overall survival of patients (traditional endpoint)</li><li>Progression free survival: time patient lives with disease without it worsening</li><li>Durable complete response: complete disappearance of all cancer</li><li>Palliation: reduction in tumor symptoms</li></ul>",
-    "links": ["8", "78", "124"],
-    "subtopic": "Regulation"
-  },
-  {
-    "id": "5",
-    "question": "LD50",
-    "answer": "Lethal Dose 50: dosage of the drug where 50% do not survive.",
-    "links": ["16"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "6",
-    "question": "CFR",
-    "answer": "Code of Federal Regulations. <ul><li>All FDA guidelines and policies are codified in CFR Title 21</li></ul>",
-    "links": ["8", "31"],
-    "subtopic": "Regulation"
-  },
-  {
-    "id": "7",
-    "question": "DDI Studies",
-    "answer": "Drug-drug Interaction Studies: what happens taking other drugs w/ this new drug? <ul><li>Context: Post-Marketing Studies</li></ul>",
-    "links": ["8"],
-    "subtopic": "Regulation"
-  },
-  {
-    "id": "8",
-    "question": "Drug Development",
-    "answer": "<ol><li>Preclinical (IND)</li><li>Phase 1 (toxicity)</li><li>Phase 2 (efficacy)</li><li>Phase 3 (endpoints)</li><li>FDA Approval (NDA)</li><li>Post-Marketing Studies (EHR)</li></ol>",
-    "links": ["4", "6", "7", "16", "17", "51", "56", "134"],
-    "subtopic": "Regulation"
-  },
-  {
-    "id": "9",
-    "question": "ADME",
-    "answer": "<ul><li>Absorption</li><li>Distribution</li><li>Metabolism</li><li>Excretion</li></ul>",
-    "links": ["11", "13"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "10",
-    "question": "Potency (EC50)",
-    "answer": "The amount of drug needed to produce a specific effect. It's a measure of the drug's power.<ul><li>Measured with Efficacy-Concentration 50 (EC50 or C50): drug concentration that produces 50% of its maximum effect</li></ul>",
-    "links": ["14", "16", "132"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "11",
-    "question": "Preferred Administration Methods",
-    "answer": "<ol><li>Oral</li><li>IV</li></ol>",
-    "links": ["9", "16"],
-    "subtopic": "Regulation"
-  },
-  {
-    "id": "12",
-    "question": "Therapeutic Window",
-    "answer": "The concentration between efficacy (low end) and toxicity (high end) on a concentration vs time graph. <ul><li>Small therapeutic windows require more careful dosing</li></ul>",
-    "links": ["14", "125"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "13",
-    "question": "PK",
-    "answer": "Pharmacokinetics: what the body does to the drug.",
-    "links": ["2", "3", "9", "14", "15", "18", "20", "32"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "14",
-    "question": "PD",
-    "answer": "Pharmacodynamics: what the drug does to the body.",
-    "links": ["10", "12", "13", "19"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "15",
-    "question": "Cmax",
-    "answer": "Maximum concentration.",
-    "links": ["13", "123"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "16",
-    "question": "IND",
-    "answer": "Investigational New Drug. <ul><li>Required to begin clinical trials</li><li>Submitted after pre-clinical phase</li></ul>",
-    "links": ["5", "8", "10", "11"],
-    "subtopic": "Regulation"
-  },
-  {
-    "id": "17",
-    "question": "NDA",
-    "answer": "New Drug Application. <ul><li>Required for FDA approval</li><li>Submitted after Phase III</li></ul>",
-    "links": ["8"],
-    "subtopic": "Regulation"
-  },
-  {
-    "id": "18",
-    "question": "Tmax",
-    "answer": "Maximum time.",
-    "links": ["13"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "19",
-    "question": "Efficacy (Emax)",
-    "answer": "The maximum response or effect a drug can produce, regardless of the dosage, represented by Emax.<ul><li>More specifically, E(0) is the baseline measurement and Emax is the maximum drug effect over baseline.</li><li>Example forms of measurement: reduction in tumor size %</li></ul>",
-    "links": ["14", "132"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "20",
-    "question": "Half Life",
-    "answer": "The time it takes for the drug concentration to decrease to half of its initial amount in the body.<ul><li>$t_{1/2} = \\frac{\\ln(2)*V_d}{CL}$</li></ul>",
-    "links": ["13"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "21",
-    "question": "VM",
-    "answer": "Virtual Machine: a technology that can be used to create isolated computing environments, which can be beneficial for some HPC tasks.",
-    "links": ["27"],
-    "subtopic": "Infrastructure"
-  },
-  {
-    "id": "22",
-    "question": "HPC",
-    "answer": "High Performance Computing: focused on achieving high performance through parallel processing, often using specialized in-house hardware and infrastructure.",
-    "links": ["26", "27"],
-    "subtopic": "Infrastructure"
-  },
-  {
-    "id": "23",
-    "question": "Cloud Computing",
-    "answer": "The practice of using a network of remote servers hosted on the internet to store, manage, and process data, rather than a local server or a personal computer.",
-    "links": ["26", "27"],
-    "subtopic": "Infrastructure"
-  },
-  {
-    "id": "24",
-    "question": "PHI",
-    "answer": "Protected Health Information: inherently identifiable information that requires an IRB.",
-    "links": ["31", "70"],
-    "subtopic": "Infrastructure"
-  },
-  {
-    "id": "25",
-    "question": "DeID OMOP",
-    "answer": "Observational Medical Outcomes Partnership: global, open-source community data standard designed to standardize the structure and content of observational data and to enable efficient analyses that can produce reliable evidence.",
-    "links": ["30"],
-    "subtopic": "Infrastructure"
-  },
-  {
-    "id": "26",
-    "question": "AWS",
-    "answer": "Amazon Web Services: cloud-based HPC platform (cloud computing).",
-    "links": ["22", "23"],
-    "subtopic": "Infrastructure"
-  },
-  {
-    "id": "27",
-    "question": "IC",
-    "answer": "Information Commons: a physical or virtual space designed to provide integrated access to information resources, technology, and support services, often within an academic library or educational setting. <ul><li>Includes: data (via CDW), computation, tools, and community</li></ul>",
-    "links": ["21", "22", "23", "70"],
-    "subtopic": "Infrastructure"
-  },
-  {
-    "id": "28",
-    "question": "Clinical Concepts",
-    "answer": "Extraction of all concepts in clinical notes into structured “clinical concepts”. <ul><li>Example extractions: dosage, ontologies, etc</li></ul>",
-    "links": ["69", "70"],
-    "subtopic": "Infrastructure"
-  },
-  {
-    "id": "29",
-    "question": "EHR",
-    "answer": "Electronic Health Records. <ul><li>Structured data</li></ul>",
-    "links": ["70", "134"],
-    "subtopic": "Infrastructure"
-  },
-  {
-    "id": "30",
-    "question": "DeID",
-    "answer": "De-identified Information: names, images, birthdays, etc are all altered or removed for anonymity.",
-    "links": ["25", "70"],
-    "subtopic": "Infrastructure"
-  },
-  {
-    "id": "31",
-    "question": "IRB",
-    "answer": "Institutional Review Board: a committee that reviews and approves research involving human subjects to ensure ethical and safe practices.",
-    "links": ["6", "24"],
-    "subtopic": "Regulation"
-  },
-  {
-    "id": "32",
-    "question": "AUC",
-    "answer": "Area Under the Curve: measures the area under the ROC curve (ML) or plasma concentration-time curve (PK). <ul><li>1.0 score indicates perfect performance</li><li>0.5 score is random guessing</li><li>In PK: $\\text{AUC} = \\frac{\\text{Dose}}{CL}$</li></ul>",
-    "links": ["13", "33", "47", "83"],
-    "subtopic": "Metrics"
-  },
-  {
-    "id": "33",
-    "question": "ROC Curve",
-    "answer": "Used to evaluate the performance of a binary classifier by plotting TPR (y) vs. FPR (x) at various classification thresholds (ex. return True if >0.9 vs just >0.5). <ul><li>The model is classifying well if TPR is high and FPR is low in general</li><li>At a low enough threshold, TPR and FPR will be 100%</li><li>It represents the trade-off between the sensitivity and specificity of a classifier</li></ul>",
-    "links": ["32", "34", "35", "36", "37"],
-    "subtopic": "Metrics"
-  },
-  {
-    "id": "34",
-    "question": "TPR",
-    "answer": "True Positive Rate: of all actual positives, how many caught? <ul><li>Also known as Sensitivity or Recall</li></ul>",
-    "links": ["33", "36", "38"],
-    "subtopic": "Metrics"
-  },
-  {
-    "id": "35",
-    "question": "FPR",
-    "answer": "False Positive Rate: of all actual negatives, how many missed? <ul><li>$FPR = \\frac{FP}{FP + TN}$</li></ul>",
-    "links": ["33"],
-    "subtopic": "Metrics"
-  },
-  {
-    "id": "36",
-    "question": "Sensitivity",
-    "answer": "Of all actual positives, how many caught? <ul><li>Also known as TPR or Recall</li></ul>",
-    "links": ["33", "34", "38"],
-    "subtopic": "Metrics"
-  },
-  {
-    "id": "37",
-    "question": "Specificity",
-    "answer": "Of all actual negatives, how many caught? <ul><li>Goal: avoid false positives (like precision, but different strategy)</li><li>Calculated as $1 - FPR = \\frac{TN}{TN + FP}$</li></ul>",
-    "links": ["33"],
-    "subtopic": "Metrics"
-  },
-  {
-    "id": "38",
-    "question": "Recall",
-    "answer": "Of all actual positives, how many caught? <ul><li>Goal: Don’t miss any true cases (high recall = few false negatives)</li><li>$\\frac{TP}{TP + FN}$</li></ul>",
-    "links": ["34", "36", "47"],
-    "subtopic": "Metrics"
-  },
-  {
-    "id": "39",
-    "question": "Precision",
-    "answer": "Of all positive reports, how many correct? <ul><li>Goal: Don’t make false claims (high precision = few false positives)</li><li>$\\frac{TP}{TP + FP}$</li></ul>",
-    "links": ["47"],
-    "subtopic": "Metrics"
-  },
-  {
-    "id": "40",
-    "question": "Supervised Learning",
-    "answer": "Give the model a starting point and end point (labeled data) and the algorithm infers the rules. <ul><li>Utilizes labeled data</li></ul>",
-    "links": ["42", "44", "46", "47", "98", "135"],
-    "subtopic": "Algorithms"
-  },
-  {
-    "id": "41",
-    "question": "Unsupervised Learning",
-    "answer": "Without labels, model finds hidden patterns on its own. During evaluation, you need to have a strong understanding of what you are looking for (since there is no labeled data)<ul><li>Utilizes unlabeled data</li></ul>",
-    "links": ["43", "98", "99"],
-    "subtopic": "Algorithms"
-  },
-  {
-    "id": "42",
-    "question": "Semi-supervised Learning",
-    "answer": "Leverage unlabeled data to improve models trained on limited labeled data. <ul><li>Learning from limited labels</li></ul>",
-    "links": ["40"],
-    "subtopic": "Algorithms"
-  },
-  {
-    "id": "43",
-    "question": "Dimensionality Reduction",
-    "answer": "Goal: reduce number of input variables while preserving as much meaningful structure or variance as possible in order to: <ul><li>simplify model</li><li>improve performance</li><li>reduce overfitting</li></ul>",
-    "links": ["41", "48", "49", "50"],
-    "subtopic": "Algorithms"
-  },
-  {
-    "id": "44",
-    "question": "Feature Importance",
-    "answer": "Transform raw data into meaningful 'features' (numerical representations) via vectorization.",
-    "links": ["40"],
-    "subtopic": "Metrics"
-  },
-  {
-    "id": "45",
-    "question": "Accuracy",
-    "answer": "$\\frac{TP + TN}{TP + FP + TN + FN}$",
-    "links": ["47"],
-    "subtopic": "Metrics"
-  },
-  {
-    "id": "46",
-    "question": "Regression",
-    "answer": "Predict continuous numerical value.",
-    "links": ["40", "62", "63", "64", "65", "67"],
-    "subtopic": "Algorithms"
-  },
-  {
-    "id": "47",
-    "question": "Classification",
-    "answer": "Predict a category or class.",
-    "links": ["32", "38", "39", "40", "45", "66", "68"],
-    "subtopic": "Algorithms"
-  },
-  {
-    "id": "48",
-    "question": "PCA",
-    "answer": "Dimensionality Reduction Technique: linear, fast, interpretable.",
-    "links": ["43"],
-    "subtopic": "Algorithms"
-  },
-  {
-    "id": "49",
-    "question": "UMAP",
-    "answer": "Dimensionality Reduction Technique: nonlinear, preserves local and global structure. Great for visualization.",
-    "links": ["43"],
-    "subtopic": "Algorithms"
-  },
-  {
-    "id": "50",
-    "question": "t-SNE",
-    "answer": "Dimensionality Reduction Technique: good for visualizing 2D/3D high-dimensional data.",
-    "links": ["43"],
-    "subtopic": "Algorithms"
-  },
-  {
-    "id": "51",
-    "question": "Drug Discovery",
-    "answer": "Goal: give us a lead therapeutic candidate.",
-    "links": ["8", "52", "53", "54", "55", "129"],
-    "subtopic": "Regulation"
-  },
-  {
-    "id": "52",
-    "question": "Biologics",
-    "answer": "Larger, more complex therapeutics derived from living organisms or their cells and usually administered by injection or infusion.",
-    "links": ["51", "57"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "53",
-    "question": "Small Molecules",
-    "answer": "Typically chemically synthesized, relatively small, and often orally bioavailable.",
-    "links": ["51"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "54",
-    "question": "Agonist",
-    "answer": "Binds to a receptor and activates it, producing a biological response.",
-    "links": ["51", "58", "59", "60"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "55",
-    "question": "Antagonist",
-    "answer": "Binds to a receptor, but does not activate it, instead blocking the receptor and preventing other molecules from binding and activating it.",
-    "links": ["51", "61"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "56",
-    "question": "Humanization",
-    "answer": "The process of modifying laboratory mice so that they more closely resemble humans, primarily in their immune system or other biological systems. <ul><li>This involves introducing human genes, cells, or tissues into the mice, allowing researchers to study human-specific diseases and therapies in a more relevant preclinical model</li></ul>",
-    "links": ["8"],
-    "subtopic": "Regulation"
-  },
-  {
-    "id": "57",
-    "question": "Antibodies",
-    "answer": "Large, Y-shaped proteins used by the immune system to identify and neutralize antigens. <ul><li>Made up of two polypeptides (light chains) and a dimer (heavy chains)</li><li>The variable regions of the heavy and light chains (VH and VL) form the antigen-binding sites, allowing antibodies to specifically recognize and bind to antigens</li><li>The constant regions of the heavy chains (CH1, CH2, CH3, and sometimes CH4) determine the antibody's class and interact with effector cells and molecules</li></ul>",
-    "links": ["52"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "58",
-    "question": "Affinity (K)",
-    "answer": "The strength with which a ligand binds to its receptor. A receptor with high affinity will bind to ligands even when their concentration is low.",
-    "links": ["54"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "59",
-    "question": "Saturation",
-    "answer": "The degree to which receptors are occupied by messengers. There are only so many receptors available to bind messengers. Eventually they may all be 'in use'!",
-    "links": ["54"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "60",
-    "question": "Specificity (binding)",
-    "answer": "The ability of a ligand to bind to one type of receptor. A messenger will only bind to a cell with the correct receptor.",
-    "links": ["54"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "61",
-    "question": "Competition",
-    "answer": "The ability of different ligands to compete for the same type of receptor. Competitors tend to resemble the natural ligand in structure.",
-    "links": ["55"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "62",
-    "question": "MSE",
-    "answer": "Calculates the average of the squared differences between predicted and actual values. <ul><li>It heavily penalizes larger errors due to the squaring</li><li>A lower MSE indicates better model performance</li></ul>",
-    "links": ["46"],
-    "subtopic": "Metrics"
-  },
-  {
-    "id": "63",
-    "question": "RMSE",
-    "answer": "The square root of the MSE. <ul><li>This metric is often preferred over MSE because it is in the same units as the target variable, making it easier to interpret.</li><li>Like MSE, RMSE also penalizes larger errors</li></ul>",
-    "links": ["46"],
-    "subtopic": "Metrics"
-  },
-  {
-    "id": "64",
-    "question": "MAE",
-    "answer": "Calculates the average of the absolute differences between predicted and actual values. <ul><li>MAE is less sensitive to outliers than MSE because it doesn't square the errors</li><li>It provides a straightforward measure of the average magnitude of errors</li></ul>",
-    "links": ["46"],
-    "subtopic": "Metrics"
-  },
-  {
-    "id": "65",
-    "question": "R²",
-    "answer": "Represents the proportion of variance in the dependent variable that is explained by the independent variables in the model. <ul><li>It ranges from 0 to 1, with higher values indicating a better fit</li><li>A high $R^2$ suggests that the model captures a large portion of the variability in the data</li></ul>",
-    "links": ["46"],
-    "subtopic": "Metrics"
-  },
-  {
-    "id": "66",
-    "question": "F1",
-    "answer": "Provides a balance between precision and recall. <ul><li>$F1 = \\frac{2 * \\text{precision} * \\text{recall}}{\\text{precision} + \\text{recall}}$</li></ul>",
-    "links": ["47"],
-    "subtopic": "Metrics"
-  },
-  {
-    "id": "67",
-    "question": "Linear Regression",
-    "answer": "Predicts a line of best fit amongst continuous data.",
-    "links": ["46"],
-    "subtopic": "Algorithms"
-  },
-  {
-    "id": "68",
-    "question": "Logistic Regression",
-    "answer": "Predicts the probability of a categorical outcome (often binary).",
-    "links": ["47"],
-    "subtopic": "Algorithms"
-  },
-  {
-    "id": "69",
-    "question": "Clinical Notes",
-    "answer": "Unstructured data written by healthcare professionals to document a patient's medical or psychological assessment, diagnosis, treatment, and progress.",
-    "links": ["28", "70"],
-    "subtopic": "Infrastructure"
-  },
-  {
-    "id": "70",
-    "question": "CDW",
-    "answer": "Clinical Data Warehouse: provides a single, unified view of patient data, enabling healthcare professionals to access and analyze information from different sources in a standardized format.",
-    "links": ["24", "27", "28", "29", "30", "69"],
-    "subtopic": "Infrastructure"
-  },
-    {
-    "id": "71",
-    "question": "Homeostasis",
-    "answer": "Maintenance of critical physiologic parameters within an optimal range (for survival) via a negative feedback loop.",
-    "links": ["73", "76"],
-    "subtopic": "Physiology"
-  },
-  {
-    "id": "72",
-    "question": "Allostasis",
-    "answer": "When the system is habituated to new normal due to repetitive changes to parameter.",
-    "links": ["76"],
-    "subtopic": "Physiology"
-  },
-  {
-    "id": "73",
-    "question": "Reflex Circuit",
-    "answer": "A neural pathway that mediates a reflex action, which is an involuntary, automatic response to a specific stimulus. Super important in the maintenance of homeostasis: <ol><li>receptor senses parameter</li><li>afferent path</li><li>integrating center (CNS)</li><li>efferent path</li><li>effector alters parameter</li></ol>",
-    "links": ["71", "74", "75"],
-    "subtopic": "Physiology"
-  },
-  {
-    "id": "74",
-    "question": "Sympathetic",
-    "answer": "Prepares the body for fight or flight responses. Branch of the autonomic nervous system.",
-    "links": ["73"],
-    "subtopic": "Physiology"
-  },
-  {
-    "id": "75",
-    "question": "Parasympathetic",
-    "answer": "Promotes rest and digest functions. Branch of the autonomic nervous system.",
-    "links": ["73"],
-    "subtopic": "Physiology"
-  },
-  {
-    "id": "76",
-    "question": "Physiologic Reserve",
-    "answer": "The body's ability to adapt to stressors and maintain normal function. We can use this concept to define disease. <ul><li>Naturally, this reserve permanently declines more rapidly with age, until 'symptoms at rest', and eventually 'death'</li><li>Acute stress (unless overwhelming) is beneficial and increases physiologic reserve because recovery is allowed</li><li>Chronic stress is ALWAYS detrimental because there is no time to repair</li></ul>",
-    "links": ["71", "72", "77", "79", "80", "81", "82"],
-    "subtopic": "Physiology"
-  },
-  {
-    "id": "77",
-    "question": "Mechanisms of Disease",
-    "answer": "<ul><li>Physical and chemical trauma/injury</li><li>Vascular: blood delivery/perfusion</li><li>Infectious</li><li>Inflammatory/autoimmune</li><li>Genetic</li><li>Metabolic</li><li>Neoplastic (cancer)</li><li>Psychological</li><li>Idiopathic/primary/essential (mechanism unknown/multi-factorial)</li></ul>",
-    "links": ["76", "78"],
-    "subtopic": "Physiology"
-  },
-  {
-    "id": "78",
-    "question": "Goals of Treatment",
-    "answer": "<ol><li>Prevent</li><li>Cure</li><li>Manage (slow down decline)</li><li>Palliate (alleviate symptoms)</li></ol>",
-    "links": ["4", "77"],
-    "subtopic": "Physiology"
-  },
-  {
-    "id": "79",
-    "question": "Acute Disease",
-    "answer": "Sudden/aburpt depletion of physiologic reserve that (with recovery) will result in full recovery and strengthen physiologic reserve (sharp, temporary). <ul><li>Example: getting the flu</li></ul>",
-    "links": ["76"],
-    "subtopic": "Physiology"
-  },
-  {
-    "id": "80",
-    "question": "Chronic Disease",
-    "answer": "The permanent, accelerated depletion of physiologic reserve (slope becomes much steeper). <ul><li>In the case of a chronic smoker, their 'slope' can reset if they quit, but it will continue at their current reserve level</li></ul>",
-    "links": ["76"],
-    "subtopic": "Physiology"
-  },
-  {
-    "id": "81",
-    "question": "Acute-to-chronic Disease",
-    "answer": "An acute disease WITHOUT complete recovery. <ul><li>Ex. pneumonia left untreated will cause chronic respiratory problems</li></ul>",
-    "links": ["76"],
-    "subtopic": "Physiology"
-  },
-  {
-    "id": "82",
-    "question": "Acute-on-chronic Disease",
-    "answer": "Chronic disease is hit by an acute stress without complete recovery. <ul><li>Ex. getting COVID while having weak lungs</li></ul>",
-    "links": ["76"],
-    "subtopic": "Physiology"
-  },
-  {
-    "id": "83",
-    "question": "Hepatic Bioavailability (Fʜ)",
-    "answer": "Systemic availability of drug after hepatic first pass metabolism.<ul><li>In general, drugs with high Eʜ have low Fʜ: $F_H = 1 - E_H$</li><li>$\\text{AUC}_{po} = \\frac{F*D}{CL}$</li></ul>",
-    "links": ["32", "88"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "84",
-    "question": "Dosaging Steady State",
-    "answer": "At steady state, rate in = rate out. In other words, infusion rate (dosage rate) = rate of elimination. <ul><li>$R_{in} = CL*C_{ss}$</li></ul>",
-    "links": ["2"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "85",
-    "question": "C(0)",
-    "answer": "Initial Concentration <ul><li>$C(0) = \\frac{\\text{Dose}}{V_d}$</li></ul>",
-    "links": ["123"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "86",
-    "question": "Extraction Ratio (E)",
-    "answer": "Fraction (between 0 and 1) of drug removed by organ in a single pass (assesses organ function). <ul><li>$E=\\frac{C_A-C_V}{C_A} = \\frac{C_{in}-C_{out}}{C_{in}}$</li></ul>",
-    "links": ["2"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "87",
-    "question": "Renal Clearance (CLʀ)",
-    "answer": "Excretory clearance (kidney) where the unchanged drug is excreted into urine.<ul><li>$CL_R=\\frac{U*V}{P}$</li><li>High level: $CL_R=CL_{\\text{filt}}+CL_{\\text{secretion}}-CL_{\\text{reabsorption}}$</li><li>$CL_{\\text{filt}} = f_u * GFR$</li></ul>",
-    "links": ["2"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "88",
-    "question": "Hepatic Clearance (CLʜ)",
-    "answer": "Metabolic clearance (liver) converting drug into metabolites, essentially removing parent compound from bloodstream.<ul><li>In a 'well-stirred' liver model: <ul><li>$E_H = \\frac{f_u*CL_I}{Q_B+f_u*CL_I}$</li><li>$CL_H = Q_B*\\frac{f_u*CL_I}{Q_B+f_u*CL_I}$</li></ul></li><li>High $E_H$ $\\rightarrow CL_H \\approx Q_B$</li><li>Low $E_H$ $\\rightarrow CL_H \\approx f_u*CL_I$</li></ul>",
-    "links": ["2", "83", "89", "90", "91"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "89",
-    "question": "Hepatic Blood Flow (Qʙ)",
-    "answer": "The circulation of blood through the liver.<ul><li>1500 mL/min for liver</li><li>1200 mL/min for kidney</li></ul>",
-    "links": ["88", "96"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "90",
-    "question": "Intrinsic Clearance (CLɪ)",
-    "answer": "Inherint ability of organ (usually referring to liver) to clear the drug without limitations from bloodflow/binding.<ul><li>High $CL_I \\rightarrow$ High $E_H$</li><li>Low $CL_I \\rightarrow$ Low $E_H$</li></ul>",
-    "links": ["88", "97"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "91",
-    "question": "Fraction Unbound (fᵤ)",
-    "answer": "Fraction (between 0 and 1) of drug unbound (floating) to total drug concentration.<ul><li>$f_u = \\frac{C_u}{C} = \\frac{1}{1+K*P} = \\frac{1}{1+K(P_{tot} - DP - XP)}$</li><li>$K$ is an affinity constant</li></ul>",
-    "links": ["88", "93"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "92",
-    "question": "Major Plasma Binding Proteins",
-    "answer": "<ul><li>Albumin</li><li>$\\alpha_1$-Acid glycoprotein</li><li>Lipoproteins</li><li>Cortisol binding globulin (transcortin)</li><li>Sex-binding globulin</li></ul>",
-    "links": ["3", "93"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "93",
-    "question": "Protein Binding",
-    "answer": "Drugs are either floating or bound to a protein.<ul><li>$P_{\\text{total}} = P + DP + XP$</li><li>$DP$ (drug bound protein) is usually negligible because $P_{\\text{total}}$ is so much larger</li><li>$XP$ (drug bound to competiting proteins) is generally considered 0, assuming no competition</li></ul>",
-    "links": ["91", "92", "95"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "94",
-    "question": "Rate of Elimination",
-    "answer": "$CL * C$",
-    "links": ["2"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "95",
-    "question": "Factors that affect Plasma Protein (fᵤ) + Tissue Binding (fᵤₜ)",
-    "answer": "<ul><li>Displacing Agents (e.g. concomitant drugs)</li><li>Changes in binding protein concentration ($P_{tot}$)</li><li>Changes in drug binding affinity (K)</li><li>Changes in tissue binding protein concentration ($T_{tot}$)</li></ul>",
-    "links": ["93"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "96",
-    "question": "Factors that affect Qʙ",
-    "answer": "<ul><li>Reduces:<ul><li>Heart Failure</li><li>Live Disease</li><li>Co-administration of beta-adrenergic blocking agents</li><li>Exercise</li></ul></li><li>Increases:<ul><li>Food</li></ul></li></ul>",
-    "links": ["89"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "97",
-    "question": "Factors that affect CLɪ",
-    "answer": "<ul><li>Reduces:<ul><li>Enzyme or Influx Transporter Inhibitors</li><li>Liver Disease</li><li>Bile Transporter Inhibitors</li></ul></li><li>Increases:<ul><li>Enzyme or Influx Transporter Inducers</li></ul></li></ul>",
-    "links": ["90"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "98",
-    "question": "Machine Learning (ML)",
-    "answer": "A subset of AI where systems learn patterns from data rather than being explicitly programmed.",
-    "links": ["40", "41", "101", "111"],
-    "subtopic": "Algorithms"
-  },
-  {
-    "id": "99",
-    "question": "Clustering",
-    "answer": "Groups data points into clusters based on similarity, without prior knowledge of cluster labels.",
-    "links": ["41", "100"],
-    "subtopic": "Algorithms"
-  },
-  {
-    "id": "100",
-    "question": "K-means",
-    "answer": "Aims to partition a dataset into k groups (clusters) where each data point belongs to the cluster with the nearest mean (centroid). It's a simple and fast algorithm, especially useful for large datasets.",
-    "links": ["99"],
-    "subtopic": "Algorithms"
-  },
-  {
-    "id": "101",
-    "question": "Deep Learning (DL)",
-    "answer": "A subset of ML that uses neural networks with many layers to model complex patterns.",
-    "links": ["98", "102", "103", "104", "105", "106", "114", "115"],
-    "subtopic": "Algorithms"
-  },
-  {
-    "id": "102",
-    "question": "MLP",
-    "answer": "XXX",
-    "links": ["101"],
-    "subtopic": "Algorithms"
-  },
-  {
-    "id": "103",
-    "question": "CNN",
-    "answer": "XXX",
-    "links": ["101", "113"],
-    "subtopic": "Algorithms"
-  },
-  {
-    "id": "104",
-    "question": "RNN",
-    "answer": "XXX",
-    "links": ["101", "112"],
-    "subtopic": "Algorithms"
-  },
-  {
-    "id": "105",
-    "question": "Transformers",
-    "answer": "Excels at handling sequential data like text by using a mechanism called attention to weigh the importance of different parts of the input WHILE processing it. This allows transformers to understand context and relationships within the data more effectively.",
-    "links": ["101", "107"],
-    "subtopic": "Algorithms"
-  },
-  {
-    "id": "106",
-    "question": "Autoencoders",
-    "answer": "XXX",
-    "links": ["101", "110"],
-    "subtopic": "Algorithms"
-  },
-  {
-    "id": "107",
-    "question": "LLMs",
-    "answer": "One use case of the Transformer architecture, specifically for language tasks and at large scale.",
-    "links": ["105", "108", "109"],
-    "subtopic": "Algorithms"
-  },
-  {
-    "id": "108",
-    "question": "GPT",
-    "answer": "Decoder-only transformer language model.",
-    "links": ["107"],
-    "subtopic": "Algorithms"
-  },
-  {
-    "id": "109",
-    "question": "BERT",
-    "answer": "Encoder-only transformer language model.",
-    "links": ["107"],
-    "subtopic": "Algorithms"
-  },
-  {
-    "id": "110",
-    "question": "VAEs",
-    "answer": "XXX",
-    "links": ["106"],
-    "subtopic": "Algorithms"
-  },
-  {
-    "id": "111",
-    "question": "Artificial Intelligence (AI)",
-    "answer": "Machines performing tasks that typically require human intelligence (e.g., reasoning, problem-solving, understanding language).<ul><li>Rule-based systems, expert systems, game-playing AIs like AlphaGo</li></ul>",
-    "links": ["98"],
-    "subtopic": "Algorithms"
-  },
-  {
-    "id": "112",
-    "question": "LSTM",
-    "answer": "XXX",
-    "links": ["104"],
-    "subtopic": "Algorithms"
-  },
-  {
-    "id": "113",
-    "question": "Downsampling",
-    "answer": "A process that reduces the spatial dimensions (width and height) of the input data, often implemented using pooling layers.",
-    "links": ["103", "116"],
-    "subtopic": "Algorithms"
-  },
-  {
-    "id": "114",
-    "question": "Activation Functions",
-    "answer": "Activation functions introduce non-linearity into neural networks, allowing them to learn complex patterns, and shape the output of individual neurons. They often scale the output to a specific range (e.g., 0 to 1, or -1 to 1).",
-    "links": ["101", "117", "118", "119"],
-    "subtopic": "Algorithms"
-  },
-  {
-    "id": "115",
-    "question": "Regularization",
-    "answer": "Regularization techniques add a penalty term to the loss function, discouraging overly complex models that might overfit the training data.",
-    "links": ["101", "120", "121", "122"],
-    "subtopic": "Algorithms"
-  },
-  {
-    "id": "116",
-    "question": "Max Pooling",
-    "answer": "Divide the input into rectangular pooling regions and, for each region, select the maximum value from the input features within that region. This process simplifies the representation, reduces computational cost, and helps with feature selection and generalization.",
-    "links": ["113"],
-    "subtopic": "Algorithms"
-  },
-  {
-    "id": "117",
-    "question": "ReLU",
-    "answer": "$f(x) = \\text{max}(0, x)$<ul><li>Strengths: simple and computationally efficient, mitigates vanishing gradients</li><li>Weaknessess: dying ReLU problem (neurons constantly zero which prevents learning), not zero-centered output (between 0 and infinity)</li></ul>",
-    "links": ["114"],
-    "subtopic": "Algorithms"
-  },
-  {
-    "id": "118",
-    "question": "Sigmoid",
-    "answer": "$f(x) = \\frac{1}{1 + \\text{exp}(-x)}$<ul><li>Strengths: probability interpretation, smooth, nice derivative</li><li>Weaknessess: vanishing gradients, not zero-centered output (between 0 to 1), can't parallelize with GPUs well</li></ul>",
-    "links": ["114"],
-    "subtopic": "Algorithms"
-  },
-  {
-    "id": "119",
-    "question": "Hyperbolic Tangent (tanh)",
-    "answer": "$f(x) = \\frac{\\text{exp}(x) - \\text{exp}(-x)}{\\text{exp}(x) + \\text{exp}(-x)}$<ul><li>Strengths: zero-centered output (-1 to 1)</li><li>Weaknessess: vanishing gradients, computationally expensive</li></ul>",
-    "links": ["114"],
-    "subtopic": "Algorithms"
-  },
-  {
-    "id": "120",
-    "question": "L1 (Lasso)",
-    "answer": "<ul><li>Encourages sparsity by driving some weights to zero, effectively performing feature selection</li><li>Penalty higher for smaller values (between -1 and 1)</li></ul>",
-    "links": ["115"],
-    "subtopic": "Algorithms"
-  },
-  {
-    "id": "121",
-    "question": "L2 (Ridge)",
-    "answer": "<ul><li>Promotes evenly small weights by shrinking them, but generally doesn’t zero them out</li><li>Penalty higher for big values</li></ul>",
-    "links": ["115"],
-    "subtopic": "Algorithms"
-  },
-  {
-    "id": "122",
-    "question": "Dropout",
-    "answer": "<ul><li>Randomly dropping neurons at certain rate by placing a zero mask over weights, effectively training many subnetworks and preventing co-adaptation (overfit)</li><li>Dropout is just for training</li></ul>",
-    "links": ["115"],
-    "subtopic": "Algorithms"
-  },
-  {
-    "id": "123",
-    "question": "Concentration Response",
-    "answer": "The relationship between drug concentration and the resulting effect. Concentration can cause varied response between patients and within individual patients over time. Appropriate concentration depends on the desired outcome:<ul><li>Need moment-to-moment concentration (immediate)?</li><li>Need certain maximum threshold? (ex. max to kill infection)</li><li>Need average concentrations? (slower)</li></ul>",
-    "links": ["15", "85"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "124",
-    "question": "Drug Response",
-    "answer": "Evaluated by assessing how the drug impacts the measurable characteristics of a disease or condition:<ul><li>Clinical Endpoint: subjective or objective characteristic that reflects how patient feels, functions, or survives (measuring the direct essence of the disease)</li><li>Surrogate Endpoint: Biomarker that has been validated to be clinically useful/indicative to act as a substitute for a clinical endpoint when its technically not feasible to measure directly</li><li>Biomarker: any characterisitic that can be objectively measured/evaluated as an indicator of normal processes (not a substitute for a clinical endpoint because there is no validation for its relevance to the given disease)</li></ul>",
-    "links": ["4", "126", "127"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "125",
-    "question": "Therapeutic Index",
-    "answer": "<ul><li>Clinical definition: the ratio of drug concentration in blood/plasma at which toxicity is first seen (MTC) to concentration needed for minimum therapeutic effect (MEC) -> $TI = \\frac{MTC}{MEC}$</li><li>Non-clinical definition (usually for animals): $\\frac{LD_{50}}{ED_{50}}$</li><li>TI < 2-3 is considered narrow and requires close monitoring (expensive)</li><li>TI > 10 has a good safety profile (ex. in case patient double doses, they will still be ok)</li></ul>",
-    "links": ["12", "128"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "126",
-    "question": "Hysteresis",
-    "answer": "The observed drug effect lags behind the given drug concentration over time. Plotting effect (y) vs concentration (x) yields a counter-clockwise loop.<ul><li>Need to wait for drug effect</li><li>Need for loading dose (single intital dose that is larger than chronic dose</li><li>Less drug needed with continued usage</li><li>Causes: delay of drug distribution, formation of active metabolite, slow dissociation, transduction, indirect response</li></ul>",
-    "links": ["124"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "127",
-    "question": "Proteresis",
-    "answer": "The observed drug effect, counterintuitively, decreases as drug concentration increases over time. Plotting effect (y) vs concentration (x) yields a clockwise loop.<ul><li>More drug being needed with continued usage</li><li>Possible need for holidays from drug use (sometimes not possible if body has too high tolerance)</li><li>Causes: high tolerance, receptors not given enough time to recover (need to increase dosing interval)</li></ul>",
-    "links": ["124"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "128",
-    "question": "ED50",
-    "answer": "Median effective dose: dosage of the drug needed to cure 50% of animals.",
-    "links": ["125"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "129",
-    "question": "Drug Permeability",
-    "answer": "Considerations: hydrophobicity, charge, pH, size",
-    "links": ["51", "130"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "130",
-    "question": "Drug Partitioning",
-    "answer": "$\\log(K_{part}) = \\log(P) = \\log_{10}(\\frac{M_{oct}}{M_{water}})$<ul><li>You need your drug to be slightly hydrophobic ($\\log(P) \\approx 1.3-1.8$)</li><li>0 to 3 is a salvagable range to be in (too hydrophilic (<) won't permeate membrane and too hydrophobic (>) will get stuck in fatty tissue)</li></ul>",
-    "links": ["129", "131"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "131",
-    "question": "Acid-Base Equillibrium",
-    "answer": "XXX",
-    "links": ["130"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "132",
-    "question": "Measurement of Disease",
-    "answer": "Measure of Disease = Baseline + Drug Response + Placebo Response + Disease Progression<ul><li>Baseline<ul><li>Measure of disease/condition pre-treatment ($E_0$)</li></ul></li><li>Drug Response<ul><li>The component of effect due only to drug</li><li>$\\frac{E_{max}*Cn}{EC_{50}^n+Cn}$</li></ul></li><li>Placebo Response<ul><li>Any therapeutic that has an effect on a patient, but objectively doesn't treat it”.</li></ul></li><li>Disease Progression<ul><li>Natural course of (chronic) disease without any treatment</li></ul></li></ul>",
-    "links": ["10", "19", "133"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "133",
-    "question": "Hill's Coefficient",
-    "answer": "A measure of cooperativity in ligand-receptor binding or enzyme-substrate interactions (concentration-response steepness factor).<ul><li>$\\frac{\\log(81)}{\\log(\\frac{C90}{C10})}$</li></ul>",
-    "links": ["132"],
-    "subtopic": "Pharmacology"
-  },
-  {
-    "id": "134",
-    "question": "Retrospective Studies",
-    "answer": "XXX",
-    "links": ["8", "29", "135", "136"],
-    "subtopic": "Regulation"
-  },
-  {
-    "id": "135",
-    "question": "Propensity Score",
-    "answer": "XXX",
-    "links": ["40", "134"],
-    "subtopic": "Algorithms"
-  },
-  {
-    "id": "136",
-    "question": "Cohort Design",
-    "answer": "XXX",
-    "links": ["134"],
-    "subtopic": "Infrastructure"
-  }
+    "id": "100000", "question": "Drug Development", "links": [], "subtopic": "Regulation", 
+    "answer": "The process of evaluating our lead therapeutic for efficacy and toxicity: drug discovery, preclinical, clinical trials, FDA submission and approval, post-marketing studies."
+  },
+        {
+          "id": "110000", "question": "Drug Discovery", "links": ["100000"], "subtopic": "Regulation",
+          "answer": "Give us a lead therapeutic candidate and target."
+        },
+              {
+                "id": "111000", "question": "Targets", "links": ["110000"], "subtopic": "Regulation",
+                "answer": "Identify a biological molecule linked to disease and confirm its relevance experimentally."
+              },
+              {
+                "id": "112000", "question": "Hit2Leads", "links": ["110000"], "subtopic": "Regulation",
+                "answer": "Finding molecules with measurable activity against the target, confirming hits are real and reproducible, and making iterative chemical modifications to improve efficacy, safety, and pharmacokinetics."
+              },
+                    {
+                      "id": "112100", "question": "Small Molecules", "links": ["112000"], "subtopic": "Regulation",
+                      "answer": "Typically chemically synthesized, relatively small, and often orally bioavailable."
+                    },
+                    {
+                      "id": "112200", "question": "Biologics", "links": ["112000"], "subtopic": "Regulation",
+                      "answer": "Larger, more complex therapeutics derived from living organisms or their cells and usually administered by injection or infusion."
+                    },
+                          {
+                            "id": "112210", "question": "Antibodies", "links": ["112200"], "subtopic": "Regulation",
+                            "answer": "Large protein biologics designed to bind specific targets (often immune-related)."
+                          },
+                          {
+                            "id": "112220", "question": "Gene Therapies", "links": ["112200"], "subtopic": "Regulation",
+                            "answer": "Treatments delivering genetic material to modify or replace faulty genes."
+                          },
+                    {
+                      "id": "112300", "question": "TIDES", "links": ["112000"], "subtopic": "Regulation",
+                      "answer": "Therapeutics based on peptides and oligonucleotides (nucleic acids)."
+                    },
+        {
+          "id": "120000", "question": "Preclinical (IND)", "links": ["100000"], "subtopic": "Regulation",
+          "answer": "Lab and animal testing (one small like mice and one large like dogs) to evaluate safety, mechanism, and pharmacology before human trials. <p>Afterwards, file an Investigational New Drug (IND) to begin clinical trials.</p>"
+        },
+              {
+                "id": "121000", "question": "LD50", "links": ["120000"], "subtopic": "Regulation",
+                "answer": "Lethal Dose 50: dosage of the drug where 50% do not survive."
+              },
+                    {
+                      "id": "122000", "question": "Humanization", "links": ["120000"], "subtopic": "Regulation",
+                      "answer": "The process of modifying laboratory mice so that they more closely resemble humans, primarily in their immune system or other biological systems. <p>This involves introducing human genes, cells, or tissues into the mice, allowing researchers to study human-specific diseases and therapies in a more relevant preclinical model.</p>"
+                    },
+        {
+          "id": "130000", "question": "Clinical Trials", "links": ["100000"], "subtopic": "Regulation",
+          "answer": "Human testing to evaluate safety and efficacy, conducted in phases."
+        },
+              {
+                "id": "131000", "question": "Phase 1", "links": ["130000"], "subtopic": "Regulation",
+                "answer": "First-in-human, small group; focuses on safety, dosage, and pharmacokinetics."
+              },
+              {
+                "id": "132000", "question": "Phase 2", "links": ["130000"], "subtopic": "Regulation",
+                "answer": "Larger group; assesses efficacy, side effects, and pharmacodynamics."
+              },
+              {
+                "id": "133000", "question": "Phase 3", "links": ["130000"], "subtopic": "Regulation",
+                "answer": "Large-scale trials to confirm efficacy, monitor adverse reactions, and compare to standard treatments. Evaluate clinical endpoints."
+              },
+                    {
+                      "id": "133100", "question": "Endpoints", "links": ["133000"], "subtopic": "Regulation",
+                      "answer": "<ul><li>Overall survival of patients (traditional endpoint)</li><li>Progression free survival: time patient lives with disease without it worsening</li><li>Durable complete response: complete disappearance of all cancer</li><li>Palliation: reduction in tumor symptoms</li></ul>"
+                    },
+        {
+          "id": "140000", "question": "FDA Submission & Approval (NDA)", "links": ["100000"], "subtopic": "Regulation",
+          "answer": "Submit a New Drug Application (NDA) to initiate regulatory review of clinical trial data and manufacturing before market authorization."
+        },
+        {
+          "id": "150000", "question": "Post-Marketing Studies", "links": ["100000"], "subtopic": "Regulation",
+          "answer": "Ongoing safety and effectiveness monitoring after approval. Also called 'Phase 4'."
+        },
+              {
+                "id": "151000", "question": "Retrospective Studies", "links": ["150000"], "subtopic": "Regulation",
+                "answer": "Research using existing data (e.g., medical records) to analyze outcomes and associations after events have occurred."
+              },
+              {
+                "id": "152000", "question": "DDI Studies", "links": ["150000"], "subtopic": "Regulation",
+                "answer": "Experiments or analyses assessing how one drug affects the pharmacokinetics or pharmacodynamics of another."
+              },
+        {
+          "id": "160000", "question": "Code of Federal Regulations (CFR) Title 21", "links": ["100000"], "subtopic": "Regulation",
+          "answer": "Outlines the regulations that govern the safety, efficacy, and quality of pharmaceutical products in the United States. It dictates how drugs are researched, developed, manufactured, and distributed, ensuring they are safe for public use and meet quality standards."
+        },
+              {
+                "id": "161000", "question": "Institutional Review Board (IRB)", "links": ["160000"], "subtopic": "Regulation",
+                "answer": "Institutional Review Board: a committee that reviews and approves research involving human subjects to ensure ethical and safe practices."
+              },
+
+  {
+    "id": "200000", "question": "Artificial Intelligence", "links": [], "subtopic": "Machine Learning",
+    "answer": "Machines performing tasks that typically require human intelligence (e.g., reasoning, problem-solving, understanding language)."
+  },
+        {
+          "id": "210000", "question": "Machine Learning", "links": ["200000"], "subtopic": "Machine Learning",
+          "answer": "A subset of AI where systems learn patterns from data rather than being explicitly programmed."
+        },
+              {
+                "id": "211000", "question": "Supervised Learning", "links": ["210000"], "subtopic": "Machine Learning",
+                "answer": "Give the model a starting point and end point (via labeled data) and let the algorithm infer the rules."
+              },
+                    {
+                      "id": "211100", "question": "Regression", "links": ["211000"], "subtopic": "Machine Learning",
+                      "answer": "Predict continuous numerical value."
+                    },
+                          {
+                            "id": "211110", "question": "Linear Regression", "links": ["211100"], "subtopic": "Machine Learning",
+                            "answer": "Predicts a line of best fit amongst continuous data."
+                          },
+                          {
+                            "id": "211120", "question": "Regression Metrics", "links": ["211100"], "subtopic": "Machine Learning",
+                            "answer": "Assess the difference between predicted and actual numerical values."
+                          },
+                                {
+                                  "id": "211121", "question": "R²", "links": ["211120"], "subtopic": "Machine Learning",
+                                  "answer": "Represents the proportion of variance in the dependent variable that is explained by the independent variables in the model. <p>It ranges from 0 to 1, with higher values indicating a better fit.</p>"
+                                },
+                                {
+                                  "id": "211122", "question": "MAE", "links": ["211120"], "subtopic": "Machine Learning",
+                                  "answer": "Calculates the average of the absolute differences between predicted and actual values. <ul><li>MAE is less sensitive to outliers than MSE because it doesn't square the errors</li><li>It provides a straightforward measure of the average magnitude of errors</li></ul>"
+                                },
+                                {
+                                  "id": "211123", "question": "MSE", "links": ["211120"], "subtopic": "Machine Learning",
+                                  "answer": "Calculates the average of the squared differences between predicted and actual values. <ul><li>It heavily penalizes larger errors due to the squaring</li><li>A lower MSE indicates better model performance</li></ul>"
+                                },
+                                {
+                                  "id": "211124", "question": "RMSE", "links": ["211120"], "subtopic": "Machine Learning",
+                                  "answer": "The square root of the MSE. <ul><li>This metric is often preferred over MSE because it is in the same units as the target variable, making it easier to interpret.</li><li>Like MSE, RMSE also penalizes larger errors</li></ul>"
+                                },
+                    {
+                      "id": "211200", "question": "Classification", "links": ["211000"], "subtopic": "Machine Learning",
+                      "answer": "Predict a category or class."
+                    },
+                          {
+                            "id": "211210", "question": "Logistic Regression", "links": ["211200"], "subtopic": "Machine Learning",
+                            "answer": "Predicts the probability of a categorical outcome (often binary)."
+                          },
+                          {
+                            "id": "211220", "question": "Classification Metrics", "links": ["211200"], "subtopic": "Machine Learning",
+                            "answer": "Evaluate the correctness of predicted categories."
+                          },
+                                {
+                                  "id": "211221", "question": "Accuracy", "links": ["211220"], "subtopic": "Machine Learning",
+                                  "answer": "$\\frac{TP + TN}{TP + FP + TN + FN}$"
+                                },
+                                {
+                                  "id": "211222", "question": "Precision", "links": ["211220"], "subtopic": "Machine Learning",
+                                  "answer": "$\\frac{TP}{TP + FP}$<ul><li>Of all positive reports, how many correct?</li><li>Don’t make false claims.</li><li>High precision = few false positives.</li></ul>"
+                                },
+                                {
+                                  "id": "211223", "question": "Recall", "links": ["211220"], "subtopic": "Machine Learning",
+                                  "answer": "$\\frac{TP}{TP + FN}$<ul><li>Of all actual positives, how many caught?</li><li>Don’t miss any true cases.</li><li>High recall = few false negatives.</li><li>Also called Sensitivity or True Positive Rate (TPR).</li></ul>"
+                                },
+                                {
+                                  "id": "211224", "question": "F1 Score", "links": ["211220"], "subtopic": "Machine Learning",
+                                  "answer": "$\\frac{2 * \\text{precision} * \\text{recall}}{\\text{precision} + \\text{recall}}$<ul><li>Provides a balance between precision and recall.</li></ul>"
+                                },
+                                {
+                                  "id": "211225", "question": "AUROC", "links": ["211220"], "subtopic": "Machine Learning",
+                                  "answer": "Area Under the ROC Curve (AUROC) is a type of Area Under the Curve (AUC) metric that measures the area under the Receiver Operating Curve (ROC) at various binary classification thresholds, plotted on TPR (y) vs. FPR (x). <ul><li>The model is classifying well if TPR is high and FPR is low.</li><li>1.0 score indicates perfect performance</li><li>0.5 score is random guessing</li></ul> <p>Useful when you want to assess how well a model can separate the two classes (positive and negative) and when you care about the overall performance across all possible thresholds. It's particularly helpful when dealing with balanced datasets or when both false positives and false negatives have similar costs.</p>"
+                                },
+                                {
+                                  "id": "211226", "question": "AUPRC", "links": ["211220"], "subtopic": "Machine Learning",
+                                  "answer": "Area Under the Precision-Recall Curve (AUPRC) is a type of Area Under the Curve (AUC) metric that measures the area under the Precision-Recall Curve (PR-Curve) at various binary classification thresholds, plotted on precision (y) vs. recall (x). <ul><li>The model is classifying well if precision and recall are high.</li><li>1.0 score indicates perfect performance</li><li>0.5 score is random guessing</li></ul> <p>More informative than AUROC when dealing with imbalanced datasets where there are significantly more negative examples than positive examples, or when the cost of false positives is high (e.g., rare disease detection, fraud detection). </p>"
+                                },
+                                {
+                                  "id": "211227", "question": "FPR", "links": ["211220"], "subtopic": "Machine Learning",
+                                  "answer": "False Positive Rate: of all actual negatives, how many missed? <p>$FPR = \\frac{FP}{FP + TN}$</p>"
+                                },
+                                {
+                                  "id": "211228", "question": "Specificity", "links": ["211220"], "subtopic": "Machine Learning",
+                                  "answer": "$1 - FPR = \\frac{TN}{TN + FP}$<ul><li>Of all actual negatives, how many caught?</li><li>Goal: avoid false positives (like precision, but different strategy)</li></ul>"
+                                },
+                          {
+                            "id": "211230", "question": "SVM", "links": ["211200"], "subtopic": "Machine Learning",
+                            "answer": "Support Vector Machines separate classes by finding the hyperplane with the maximum margin, and can handle nonlinear problems using kernel functions.<p>SVMs can also be adapted for regression tasks through a variant called Support Vector Regression (SVR).</p>"
+                          },
+                          {
+                            "id": "211240", "question": "KNN", "links": ["211200"], "subtopic": "Machine Learning",
+                            "answer": "K-Nearest Neighbors classifies or predicts values by looking at the majority (or average) of the k closest data points in feature space; simple but can be slow with large datasets.<p>KNNs can be adapted for regression by taking the average of the K nearest neighbors' values to predict a continuous outcome.</p>"
+                          },
+                    {
+                      "id": "211300", "question": "Decision Trees", "links": ["211000"], "subtopic": "Machine Learning",
+                      "answer": "Models that split data recursively based on feature thresholds, forming a tree of “if–then” rules to make predictions. <p>These algorithms are used for both classification and regression tasks.</p>"
+                    },
+                          {
+                            "id": "211310", "question": "Random Forest", "links": ["211300"], "subtopic": "Machine Learning",
+                            "answer": "An ensemble of decision trees trained on random subsets of data and features; predictions are averaged (regression) or majority-voted (classification).<p>Random Forest reduces variance via averaging many trees in parallel.</p>"
+                          },
+                          {
+                            "id": "211320", "question": "Gradient Boosting", "links": ["211300"], "subtopic": "Machine Learning",
+                            "answer": "Builds trees sequentially, each new tree correcting errors of the previous ones by optimizing a loss function with gradient descent.<p>Gradient Boosting reduces bias by adding trees sequentially in a corrective manner.</p>"
+                          },
+              {
+                "id": "212000", "question": "Unsupervised Learning", "links": ["210000"], "subtopic": "Machine Learning",
+                "answer": "Let the model find hidden patterns on its own without labeled data."
+              },
+                    {
+                      "id": "212100", "question": "Dimensionality Reduction", "links": ["212000"], "subtopic": "Machine Learning",
+                      "answer": "Reduces the number of input variables while preserving as much meaningful structure or variance as possible in order to simplify the model, improve performance, and reduce overfitting."
+                    },
+                          {
+                            "id": "212110", "question": "PCA", "links": ["212100"], "subtopic": "Machine Learning",
+                            "answer": "Linear technique that projects data onto directions of maximum variance for dimensionality reduction."
+                          },
+                          {
+                            "id": "212120", "question": "UMAP", "links": ["212100"], "subtopic": "Machine Learning",
+                            "answer": "Nonlinear method preserving local and global structure in low-dimensional embeddings."
+                          },
+                          {
+                            "id": "212130", "question": "t-SNE", "links": ["212100"], "subtopic": "Machine Learning",
+                            "answer": "Nonlinear method emphasizing local structure, making similar points appear close in visualization."
+                          },
+                          {
+                            "id": "212140", "question": "SVD", "links": ["212100"], "subtopic": "Machine Learning",
+                            "answer": "Singular Value Decomposition (SVD) is a powerful matrix factorization technique used in machine learning to decompose a matrix into three other matrices, revealing key structural aspects of the original data."
+                          },
+                          {
+                            "id": "212150", "question": "Feature Selection", "links": ["212100"], "subtopic": "Machine Learning",
+                            "answer": "Aims to identify and select the most relevant features from a dataset, effectively reducing the number of input variables while retaining the most important information."
+                          },
+                                {
+                                  "id": "212151", "question": "Feature Importance", "links": ["212150"], "subtopic": "Machine Learning",
+                                  "answer": "The process of quantifying the contribution or relevance of each input feature to the predictions or performance of a machine learning model. It assigns a score to each feature, indicating how much influence it has on the model's output."
+                                },
+                    {
+                      "id": "212200", "question": "Clustering", "links": ["212000"], "subtopic": "Machine Learning",
+                      "answer": "Groups data points into clusters based on similarity, without prior knowledge of cluster labels."
+                    },
+                          {
+                            "id": "212210", "question": "K-means", "links": ["212200"], "subtopic": "Machine Learning",
+                            "answer": "Clustering algorithm that partitions data into k groups by minimizing within-cluster distance to the centroid."
+                          },
+                    {
+                      "id": "212300", "question": "Self-supervised Learning", "links": ["212000"], "subtopic": "Machine Learning",
+                      "answer": "A training strategy where the model learns from unlabeled data by creating its own supervision signals (e.g., predicting hidden or transformed parts of the input)."
+                    },
+                          {
+                            "id": "212310", "question": "Masked Language Modeling (MLM)", "links": ["212300"], "subtopic": "Machine Learning",
+                            "answer": "A self-supervised task where some words in a sentence are masked and the model learns to predict them from context, as used in BERT pretraining."
+                          },
+                          {
+                            "id": "212320", "question": "Autoregressive Modeling", "links": ["212300"], "subtopic": "Machine Learning",
+                            "answer": "A self-supervised training method where the model predicts the next token in a sequence given all previous tokens (used in GPT-style models).<p>Unlike MLM which learns bidirectional context, autoregressive learns left-to-right (causal) dependencies making it better for generation."
+                          },
+              {
+                "id": "213000", "question": "Hyperparameters", "links": ["210000"], "subtopic": "Machine Learning",
+                "answer": "Settings chosen before training (e.g., learning rate, number of layers, batch size) that shape training dynamics and model capacity."
+              },
+                    {
+                      "id": "213100", "question": "Learning Rate", "links": ["213000"], "subtopic": "Machine Learning",
+                      "answer": "Controls step size during training; too high can diverge, too low can stall."
+                    },
+                    {
+                      "id": "213200", "question": "Activation Functions", "links": ["213000"], "subtopic": "Machine Learning",
+                      "answer": "Activation functions introduce non-linearity into neural networks, allowing them to learn complex patterns, and shape the output of individual neurons. They often scale the output to a specific range (e.g., 0 to 1, or -1 to 1)."
+                    },
+                          {
+                            "id": "213210", "question": "ReLU", "links": ["213200"], "subtopic": "Machine Learning",
+                            "answer": "$f(x) = \\text{max}(0, x)$<ul><li>Strengths: simple and computationally efficient, mitigates vanishing gradients</li><li>Weaknessess: dying ReLU problem (neurons constantly zero which prevents learning), not zero-centered output (between 0 and infinity)</li></ul>"
+                          },
+                          {
+                            "id": "213220", "question": "Sigmoid", "links": ["213200"], "subtopic": "Machine Learning",
+                            "answer": "$f(x) = \\frac{1}{1 + \\text{exp}(-x)}$<ul><li>Strengths: probability interpretation, smooth, nice derivative</li><li>Weaknessess: vanishing gradients, not zero-centered output (between 0 to 1), can't parallelize with GPUs well</li></ul>"
+                          },
+                          {
+                            "id": "213230", "question": "Hyperbolic Tangent (tanh)", "links": ["213200"], "subtopic": "Machine Learning",
+                          "answer": "$f(x) = \\frac{\\text{exp}(x) - \\text{exp}(-x)}{\\text{exp}(x) + \\text{exp}(-x)}$<ul><li>Strengths: zero-centered output (-1 to 1)</li><li>Weaknessess: vanishing gradients, computationally expensive</li></ul>"
+                        },
+                    {
+                      "id": "213300", "question": "Regularization", "links": ["213000"], "subtopic": "Machine Learning",
+                      "answer": "Regularization techniques add a penalty term to the loss function, discouraging overly complex models that might overfit the training data."
+                    },
+                          {
+                            "id": "213310", "question": "L1 (Lasso)", "links": ["213300"], "subtopic": "Machine Learning",
+                            "answer": "<ul><li>Encourages sparsity by driving some weights to zero, effectively performing feature selection</li><li>Penalty higher for smaller values (between -1 and 1)</li></ul>"
+                          },
+                          {
+                            "id": "213320", "question": "L2 (Ridge)", "links": ["213300"], "subtopic": "Machine Learning",
+                            "answer": "<ul><li>Promotes evenly small weights by shrinking them, but generally doesn’t zero them out</li><li>Penalty higher for big values</li></ul>"
+                          },
+                          {
+                            "id": "213330", "question": "Dropout", "links": ["213300"], "subtopic": "Machine Learning",
+                            "answer": "<ul><li>Randomly dropping neurons at certain rate by placing a zero mask over weights, effectively training many subnetworks and preventing co-adaptation (overfit)</li><li>Dropout is just for training</li></ul>"
+                          },
+                    {
+                      "id": "213400", "question": "Optimization Algorithms", "links": ["213000"], "subtopic": "Machine Learning",
+                      "answer": "A tunable setting (e.g., learning rate, momentum) affecting how an optimizer updates model weights."
+                    },
+                          {
+                            "id": "213410", "question": "Adam Optimizer", "links": ["213400"], "subtopic": "Machine Learning",
+                            "answer": "Adaptive method combining momentum and per-parameter learning rates; often works well out of the box."
+                          },
+                    {
+                      "id": "213500", "question": "Temperature", "links": ["213000"], "subtopic": "Machine Learning",
+                      "answer": "In probabilistic generation, controls randomness: high = more diverse, low = more deterministic."
+                    },
+              {
+                "id": "214000", "question": "Deep Learning", "links": ["210000"], "subtopic": "Machine Learning",
+                "answer": "A subset of ML that uses neural networks with many layers to model complex patterns."
+              },
+                    {
+                      "id": "214100", "question": "MLP", "links": ["214000"], "subtopic": "Machine Learning",
+                      "answer": "A basic feed-forward neural network with fully connected layers; good for general tabular and simple data."
+                    },
+                    {
+                      "id": "214200", "question": "CNN", "links": ["214000"], "subtopic": "Machine Learning",
+                      "answer": "Uses convolution filters to detect local patterns; excels in images and spatial data."
+                    },
+                    {
+                      "id": "214300", "question": "GNN", "links": ["214000"], "subtopic": "Machine Learning",
+                      "answer": "Operates on graph-structured data, passing and aggregating information between connected nodes."
+                    },
+                    {
+                      "id": "214400", "question": "RNN", "links": ["214000"], "subtopic": "Machine Learning",
+                      "answer": "Processes sequential data by maintaining hidden states; good for time series and text (but prone to vanishing gradients)."
+                    },
+                          {
+                            "id": "214410", "question": "LSTM", "links": ["214400"], "subtopic": "Machine Learning",
+                            "answer": "An RNN variant with gating mechanisms (input, forget, output gates) that helps preserve information over long sequences and avoid vanishing gradients."
+                          },
+                    {
+                      "id": "214500", "question": "Autoencoder", "links": ["214000"], "subtopic": "Machine Learning",
+                      "answer": "Learns to compress (encode) data into a latent representation and then reconstruct (decode) it; often used for dimensionality reduction and denoising."
+                    },
+                          {
+                            "id": "214510", "question": "VAE", "links": ["214500"], "subtopic": "Machine Learning",
+                            "answer": "A probabilistic autoencoder that learns a distribution over latent variables, enabling generative sampling."
+                          },
+                    {
+                      "id": "214600", "question": "Transformer", "links": ["214000"], "subtopic": "Machine Learning",
+                      "answer": "Uses self-attention to capture long-range dependencies without recurrence; dominant in modern NLP and beyond."
+                    },
+                          {
+                            "id": "214610", "question": "Large Language Models (LLMs)", "links": ["214600"], "subtopic": "Machine Learning",
+                            "answer": "One use case of the Transformer architecture, specifically for language tasks and at large scale."
+                          },
+                                {
+                                  "id": "214611", "question": "BERT", "links": ["214610"], "subtopic": "Machine Learning",
+                                  "answer": "A encoder-only, bi-directional transformer trained for masked language modeling and next sentence prediction; strong at understanding text context."
+                                },
+                                {
+                                  "id": "214612", "question": "GPT", "links": ["214610"], "subtopic": "Machine Learning",
+                                  "answer": "A decoder-only, unidirectional transformer trained for next-token prediction; excels at coherent text generation."
+                                },
+              {
+                "id": "215000", "question": "Transfer Learning", "links": ["210000"], "subtopic": "Machine Learning",
+                      "answer": "Using knowledge gained from one task/domain to improve performance on another.<p>Fine-tuning is one form of transfer learning, but transfer learning can also mean freezing features and just training a classifier on top.</p>"
+              },
+                    {
+                      "id": "215100", "question": "Finetuning", "links": ["215000"], "subtopic": "Machine Learning",
+                      "answer": "Training a pretrained model further on a smaller, task-specific dataset."
+                    },
+                    {
+                      "id": "215200", "question": "Distillation", "links": ["215000"], "subtopic": "Machine Learning",
+                      "answer": "Training a smaller 'student' model to mimic a larger 'teacher' model. The student learns not just from ground-truth labels, but from the teacher’s softer probability outputs."
+                    },
+              {
+                "id": "216000", "question": "Semi-supervised Learning", "links": ["210000"], "subtopic": "Machine Learning",
+                "answer": "Training with a small amount of labeled data and a large amount of unlabeled data."
+              },
+
+  {
+    "id": "300000", "question": "Pharmacology", "links": [], "subtopic": "Pharmacology",
+    "answer": "The study of drugs and their effects on living organisms. <p>It encompasses understanding how drugs work, their therapeutic uses, potential side effects, and how they interact with the body.</p>"
+  },
+        {
+          "id": "310000", "question": "Pharmacokinetics", "links": ["300000"], "subtopic": "Pharmacology",
+          "answer": "What the body does to the drug: absorption, distribution, metabolism, excretion (ADME)."
+        },
+              {
+                "id": "311000", "question": "ADME", "links": ["310000"], "subtopic": "Pharmacology",
+                "answer": "Absorption, Distribution, Metabolism, Excretion."
+              },
+                    {
+                      "id": "311100", "question": "Absorption", "links": ["311000"], "subtopic": "Pharmacology",
+                      "answer": "The process by which the drug enters the bloodstream from its site of administration (e.g., orally ingested, injected, inhaled)."
+                    },
+                          {
+                            "id": "311110", "question": "Administration Methods", "links": ["311100"], "subtopic": "Pharmacology",
+                            "answer": "<ul><li>Oral (most preferred): drug passes through the digestive system</li><li>IV Bolus Injection: rapid injection, typically delivered within seconds to a few minutes</li><li>IV Infusion: delivered slowly and steadily over a longer period, ranging from 30 to 60 minutes, and sometimes even several hours or days</li></ul>"
+                          },
+                    {
+                      "id": "311200", "question": "Distribution", "links": ["311000"], "subtopic": "Pharmacology",
+                      "answer": "The drug is distributed throughout the body's tissues and organs via the bloodstream. The goal is to reach the drug's target site at an effective concentration."
+                    },
+                    {
+                      "id": "311300", "question": "Metabolism", "links": ["311000"], "subtopic": "Pharmacology",
+                      "answer": "The chemical breakdown or transformation of the drug primarily by the liver into more water-soluble metabolites that can be more easily excreted. Enzymes like cytochrome P450 play a significant role in this process."
+                    },
+                    {
+                      "id": "311400", "question": "Excretion", "links": ["311000"], "subtopic": "Pharmacology",
+                      "answer": "The drug and its metabolites are eliminated from the body. The primary routes of excretion are through the kidneys (urine) and liver (bile/feces)."
+                    },
+              {
+                "id": "312000", "question": "Volume of Distribution", "links": ["310000"], "subtopic": "Pharmacology",
+                "answer": "A theoretical volume describing how a drug distributes between plasma and tissues.<p>$V_d = \\frac{\\text{Amount of drug in body}}{\\text{Plasma drug concentration}}$</p><p>A large $V_d$ suggests extensive tissue distribution, while a small $V_d$ indicates the drug mostly stays in plasma.</p>"
+              },
+                    {
+                      "id": "312100", "question": "Protein Binding", "links": ["312000"], "subtopic": "Pharmacology",
+                      "answer": "If a drug binds strongly to tissue (low $f_{ut}$), the $V_d$ increases. If it binds strongly to plasma proteins (low $f_u$), $V_d$ decreases. <p>$V_d = V_P + \\frac{f_u \\cdot V_T}{f_{ut}}$</p><ul><li>$V_P$ is negligible if $V_d > 40$ L </li></ul>"
+                    },
+                          {
+                            "id": "312110", "question": "Plasma Binding Proteins", "links": ["312100"], "subtopic": "Pharmacology",
+                            "answer": "<ul><li>Albumin</li><li>$\\alpha_1$-Acid glycoprotein</li><li>Lipoproteins</li><li>Cortisol binding globulin (transcortin)</li><li>Sex-binding globulin</li></ul>"
+                          },
+              {
+                "id": "313000", "question": "Clearance", "links": ["310000"], "subtopic": "Pharmacology",
+                "answer": "Drug elimination efficiency: the efficiency of the body at irreversibly removing the drug from blood plasma.<p>$CL=Q_B\\cdot E=Q_B \\cdot \\frac{f_u \\cdot CL_I}{Q_B + f_u \\cdot CL_I}$</p><p>High $E_{high} \\rightarrow CL \\approx Q_B$</p><p>Low $E_{low} \\rightarrow CL \\approx f_u \\cdot CL_I$</p>"
+              },
+                    {
+                      "id": "313100", "question": "Extraction Ratio (E)", "links": ["313000"], "subtopic": "Pharmacology",
+                      "answer": "Fraction (between 0 and 1) of drug removed by organ in a single pass (assesses organ function). <p>$E=\\frac{C_A-C_V}{C_A} = \\frac{C_{in}-C_{out}}{C_{in}}$</p>"
+                    },
+                    {
+                      "id": "313200", "question": "Blood Flow (Qʙ)", "links": ["313000"], "subtopic": "Pharmacology",
+                      "answer": "The circulation of blood through the liver.<ul><li>1500 mL/min for liver</li><li>1200 mL/min for kidney</li></ul>"
+                    },
+                    {
+                      "id": "313300", "question": "Fraction Unbound (fᵤ)", "links": ["313000"], "subtopic": "Pharmacology",
+                      "answer": "Fraction (between 0 and 1) of drug unbound (floating) to total drug concentration.<ul><li>$f_u = \\frac{C_u}{C} = \\frac{1}{1+K*P} = \\frac{1}{1+K(P_{tot} - DP - XP)}$</li><li>$K$ is an affinity constant</li></ul>"
+                    },
+                    {
+                      "id": "313400", "question": "Intrinsic Clearance (CLɪ)", "links": ["313000"], "subtopic": "Pharmacology",
+                      "answer": "Inherint ability of organ (usually referring to liver) to clear the drug without limitations from bloodflow/binding.<ul><li>High $CL_I \\rightarrow$ High $E_H$</li><li>Low $CL_I \\rightarrow$ Low $E_H$</li></ul>"
+                    },
+              {
+                "id": "314000", "question": "Half Life", "links": ["310000"], "subtopic": "Pharmacology",
+                "answer": "The time it takes for the drug concentration to decrease to half of its initial amount in the body.<p>$t_{1/2} = \\frac{\\ln(2)*V_d}{CL}$</p>"
+              },
+              {
+                "id": "315000", "question": "Steady State", "links": ["310000"], "subtopic": "Pharmacology",
+                "answer": "At steady state, rate in = rate out. In other words, infusion rate (dosage rate) = rate of elimination ($CL \\cdot C$).</p><p>$R_{in} = CL*C_{ss}$</p>"
+              },
+                    {
+                      "id": "315100", "question": "Rate of Elimination", "links": ["315000"], "subtopic": "Pharmacology",
+                      "answer": "$CL \\cdot C$"
+                    },
+              {
+                "id": "316000", "question": "Bioavailability", "links": ["310000"], "subtopic": "Pharmacology",
+                "answer": "Fraction (between 0 and 1) of drug absorbed into the systemic circulation.<p>$F = \\frac{AUC_{oral}}{AUC_{iv}}$</p>"
+              },
+                    {
+                      "id": "316100", "question": "AUC", "links": ["316000"], "subtopic": "Pharmacology",
+                      "answer": "$AUC = \\frac{Dose}{CL}$"
+                    },
+              {
+                "id": "317000", "question": "Dosage", "links": ["310000"], "subtopic": "Pharmacology",
+                "answer": "$\\text{Amount} = V \\cdot C$<p>$\\text{Dosage} = V \\cdot C(0)$</p>"
+              },
+        
+        {
+          "id": "320000", "question": "Pharacodynamics", "links": ["300000"], "subtopic": "Pharmacology",
+          "answer": "What the drug does to the body."
+        },
+              {
+                "id": "321000", "question": "Potency (EC50/ED50)", "links": ["320000"], "subtopic": "Pharmacology",
+                "answer": "The amount of drug needed to produce a specific effect. It's a measure of the drug's power.<p>Measured with Efficacy-Concentration 50 (EC50 or C50): drug concentration that produces 50% of its maximum effect.</p><p>Median Effective Dose (ED50): The dose of a drug that produces a desired therapeutic effect in 50% of the population being studied.</p>"
+              },
+              {
+                "id": "322000", "question": "Efficacy (Emax)", "links": ["320000"], "subtopic": "Pharmacology",
+                "answer": "The maximum response or effect a drug can produce, regardless of the dosage, represented by Emax.<ul><li>More specifically, E(0) is the baseline measurement and Emax is the maximum drug effect over baseline.</li></ul>"
+              },
+              {
+                "id": "323000", "question": "Therapeutic Window", "links": ["320000"], "subtopic": "Pharmacology",
+                "answer": "The concentration between efficacy (low end) and toxicity (high end) on a concentration vs time graph. <ul><li>Small therapeutic windows require more careful dosing.</li></ul>"
+              },
+                    {
+                      "id": "323100", "question": "Therapeutic Index", "links": ["323000"], "subtopic": "Pharmacology",
+                      "answer": "Clinical definition: the ratio of drug concentration in blood/plasma at which toxicity is first seen (MTC) to concentration needed for minimum therapeutic effect (MEC) -> $TI = \\frac{MTC}{MEC}$<p>Non-clinical definition (usually for animals): $\\frac{LD_{50}}{ED_{50}}$</p><ul><li>TI < 2-3 is considered narrow and requires close monitoring (expensive)</li><li>TI > 10 has a good safety profile (ex. in case patient double doses, they will still be ok)</li></ul>"
+                    },
+              {
+                "id": "324000", "question": "Affinity (K)", "links": ["320000"], "subtopic": "Pharmacology",
+                "answer": "The strength with which a ligand binds to its receptor. A receptor with high affinity will bind to ligands even when their concentration is low.</li></ul>"
+              },
+              {
+                "id": "325000", "question": "Sensitivity (Hill's Coefficient)", "links": ["320000"], "subtopic": "Pharmacology",
+                "answer": "A measure of cooperativity in ligand-receptor binding or enzyme-substrate interactions (concentration-response steepness factor).<ul><li>$\\frac{\\log(81)}{\\log(\\frac{C90}{C10})}$</li></ul>"
+              },
+
+  {
+    "id": "70000", "question": "Information Commons (IC)", "links": [], "subtopic": "Infastructure",
+    "answer": "Information Commons is a physical or virtual space designed to provide integrated access to information resources, technology, and support services, often within an academic library or educational setting. <p>Includes: data (via CDW), computation, tools, and community.</p>"
+  },
+        {
+          "id": "71000", "question": "CDW", "links" : ["70000"], "subtopic": "Infastructure",
+          "answer": "The Clinical Data Warehouse provides a single, unified view of patient data, enabling healthcare professionals to access and analyze information from different sources in a standardized format."
+        },
+              {
+                "id": "71100", "question": "EHR", "links" : ["71000"], "subtopic": "Infastructure",
+                "answer": "An Electronic Health Record is a digital version of a patient's medical history, maintained by a healthcare provider over time. It includes all key administrative and clinical data relevant to a patient's care under a particular provider."
+              },
+                    {
+                      "id": "71110", "question": "Clinical Notes", "links" : ["71100"], "subtopic": "Infastructure",
+                      "answer": "Free-text, unstructured narratives created by healthcare providers during patient encounters."
+                    },
+                    {
+                      "id": "71120", "question": "Clinical Concepts", "links" : ["71100"], "subtopic": "Infastructure",
+                      "answer": "The specific medical terms, diagnoses, findings, and other data points that describe a patient's health in a structured data format."
+                    },
+              {
+                "id": "71200", "question": "OMOP", "links" : ["71000"], "subtopic": "Infastructure",
+                "answer": "The Observational Medical Outcomes Partnership is a global, open-source community data standard designed to standardize the structure and content of observational data and to enable efficient analyses that can produce reliable evidence."
+              },
+                    {
+                      "id": "71210", "question": "DeID", "links" : ["71200"], "subtopic": "Infastructure",
+                      "answer": "De-identified Information like names, images, birthdays, and other identifiable information that are all altered or removed for anonymity."
+                    },
+                    {
+                      "id": "71220", "question": "PHI", "links" : ["71200"], "subtopic": "Infastructure",
+                      "answer": "Protected Health Information is inherently identifiable information that requires an Institutional Review Board (IRB) to approve its usage."
+                    },
+              {
+                "id": "71300", "question": "Cohort Design", "links" : ["71000"], "subtopic": "Infastructure",
+                "answer": "Designing a cohort from electronic health record (EHR) data involves carefully defining inclusion and exclusion criteria, selecting appropriate data elements, and establishing baseline characteristics and follow-up procedures.<p>This process transforms raw EHR data into a structured dataset suitable for retrospective studies.</p>"
+              },
+        {
+          "id": "72000", "question": "Cloud Computing", "links" : ["70000"], "subtopic": "Infastructure",
+          "answer": "The practice of using a network of remote servers hosted on the internet to store, manage, and process data, rather than a local server or a personal computer."
+        },
+              {
+                "id": "72100", "question": "HPC", "links" : ["72000"], "subtopic": "Infastructure",
+                "answer": "High Performance Computing focuses on achieving high performance through parallel processing, often using specialized in-house hardware and infrastructure."
+              },
+              {
+                "id": "72200", "question": "AWS", "links" : ["72000"], "subtopic": "Infastructure",
+                "answer": "Amazon Web Services is a cloud-based HPC platform that offers a wide array of services, including compute power, storage, databases, analytics, networking, and more."
+              },
+                    {
+                      "id": "72210", "question": "EFS", "links" : ["72200"], "subtopic": "Infastructure",
+                      "answer": "AWS fully managed, scalable file storage that can be mounted on multiple EC2 instances."
+                    },
+                    {
+                      "id": "72220", "question": "S3", "links" : ["72200"], "subtopic": "Infastructure",
+                      "answer": "AWS object storage for scalable, durable, long-term storage of files and data."
+                    },
+                    {
+                      "id": "72230", "question": "EC2", "links" : ["72200"], "subtopic": "Infastructure",
+                      "answer": "AWS virtual servers for running applications, with configurable CPU, memory, and storage."
+                    },
+              {
+                "id": "72300", "question": "VM", "links" : ["72000"], "subtopic": "Infastructure",
+                "answer": "A virtual machine is a software-based simulation of a computer that runs its own OS and applications, isolated from the host system, which can be beneficial for some cloud computing tasks."
+              },
+                    {
+                      "id": "72310", "question": "Virtual Environment", "links" : ["72300"], "subtopic": "Infastructure",
+                      "answer": "A self-contained coding environment (often Python) with its own packages and dependencies, preventing conflicts between projects."
+                    }
 ]

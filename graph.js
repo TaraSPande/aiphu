@@ -9,7 +9,14 @@ const zoom = d3.zoom()
 svg.call(zoom);
 
 function resetView() {
-  svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity);
+  const zoomOutScale = 0.25;
+  const centerX = width / 2;
+  const centerY = height / 2;
+  const transform = d3.zoomIdentity
+    .translate(centerX * (1 - zoomOutScale), centerY * (1 - zoomOutScale))
+    .scale(zoomOutScale);
+
+  svg.transition().duration(500).call(zoom.transform, transform);
 }
 
 let selectedNodeId = null;
@@ -68,7 +75,14 @@ fetch('flashcards.json')
       .selectAll("circle")
       .data(allNodes)
       .join("circle")
-      .attr("r", 20)
+      .attr("r", d => {
+        if (/00000$/.test(d.id)) return 30; //top-level
+        if (/0000$/.test(d.id)) return 22;  // second level
+        if (/000$/.test(d.id)) return 15;   // third level
+        if (/00$/.test(d.id)) return 10;    // fourth level
+        if (/0$/.test(d.id)) return 8;      // fifth level
+        return 5;                           // leaf node
+      })
       .attr("fill", d => color(d.subtopic))
       .attr("class", "node")
       .call(drag(simulation))
@@ -77,7 +91,7 @@ fetch('flashcards.json')
         selectedNodeId = d.id;
         nodeElements.classed("highlighted", nd => nd.id === d.id);
         document.getElementById("qa-display").innerHTML = `
-          <h3>${d.id}. ${d.question}</h3>
+          <h3>${d.question}</h3>
           <p>${d.answer}</p>
         `;
         MathJax.typesetPromise();
@@ -97,6 +111,7 @@ fetch('flashcards.json')
         <p>Click on a node to see its question and answer.</p>
       `;
       document.getElementById("suggestions").innerHTML = "";
+      document.getElementById("node-search").value = "";
     });
 
     simulation.on("tick", () => {
@@ -118,6 +133,16 @@ fetch('flashcards.json')
         (filterValue === "all" ||
          (d.source.subtopic === filterValue && d.target.subtopic === filterValue)) ? "visible" : "hidden");
     }
+
+    const initialScale = 0.25;
+    const centerX = width / 2;
+    const centerY = height / 2;
+
+    const initialTransform = d3.zoomIdentity
+      .translate(centerX - centerX * initialScale, centerY - centerY * initialScale)
+      .scale(initialScale);
+
+    svg.call(zoom.transform, initialTransform);
   });
 
 // Drag support
@@ -161,9 +186,7 @@ function searchNode() {
 
     // Show QA panel
     document.getElementById("qa-display").innerHTML = `
-      <h3>Question (ID: ${match.id})</h3>
-      <p>${match.question}</p>
-      <h3>Answer</h3>
+      <h3>${match.question}</h3>
       <p>${match.answer}</p>
     `;
     MathJax.typesetPromise();
@@ -202,15 +225,34 @@ function updateSuggestions() {
     list.style.border = "1px solid #ccc";
     list.style.position = "absolute";
     list.style.zIndex = "10";
-    list.style.width = "100%";
+    list.style.width = "80%";
 
     matches.forEach(match => {
       const item = document.createElement("li");
-      item.textContent = `[${match.id}] ${match.question}`;
+      item.textContent = `${match.question}`;
       item.style.padding = "8px";
       item.style.cursor = "pointer";
       item.addEventListener("click", () => {
-        document.getElementById("node-search").value = match.id;
+        // document.getElementById("node-search").value = match.id;
+        nodeElements.classed("highlighted", d => d.id === match.id);
+
+        // Show QA panel
+        document.getElementById("qa-display").innerHTML = `
+          <h3>${match.question}</h3>
+          <p>${match.answer}</p>
+        `;
+        MathJax.typesetPromise();
+    
+        // Zoom to it smoothly
+        const scale = 1.5;
+        const transform = d3.zoomIdentity
+          .translate(width / 2 - match.x * scale, height / 2 - match.y * scale)
+          .scale(scale);
+    
+        svg.transition()
+          .duration(750)
+          .call(zoom.transform, transform);
+        
         suggestionsDiv.innerHTML = "";
       });
       list.appendChild(item);
