@@ -9,7 +9,14 @@ const zoom = d3.zoom()
 svg.call(zoom);
 
 function resetView() {
-  svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity);
+  const zoomOutScale = 0.25;
+  const centerX = width / 2;
+  const centerY = height / 2;
+  const transform = d3.zoomIdentity
+    .translate(centerX * (1 - zoomOutScale), centerY * (1 - zoomOutScale))
+    .scale(zoomOutScale);
+
+  svg.transition().duration(500).call(zoom.transform, transform);
 }
 
 let selectedNodeId = null;
