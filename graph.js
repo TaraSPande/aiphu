@@ -133,6 +133,16 @@ fetch('flashcards.json')
         (filterValue === "all" ||
          (d.source.subtopic === filterValue && d.target.subtopic === filterValue)) ? "visible" : "hidden");
     }
+
+    const initialScale = 0.25;
+    const centerX = width / 2;
+    const centerY = height / 2;
+
+    const initialTransform = d3.zoomIdentity
+      .translate(centerX - centerX * initialScale, centerY - centerY * initialScale)
+      .scale(initialScale);
+
+    svg.call(zoom.transform, initialTransform);
   });
 
 // Drag support
