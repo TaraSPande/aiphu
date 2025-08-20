@@ -161,12 +161,12 @@
                                   "answer": "$\\frac{2 * \\text{precision} * \\text{recall}}{\\text{precision} + \\text{recall}}$<ul><li>Provides a balance between precision and recall.</li></ul>"
                                 },
                                 {
-                                  "id": "211225", "question": "AUC", "links": ["211220"], "subtopic": "Machine Learning",
-                                  "answer": "Area Under the Curve (AUC) measures the area under the ROC curve. <ul><li>1.0 score indicates perfect performance</li><li>0.5 score is random guessing</li></ul>"
+                                  "id": "211225", "question": "AUROC", "links": ["211220"], "subtopic": "Machine Learning",
+                                  "answer": "Area Under the ROC Curve (AUROC) is a type of Area Under the Curve (AUC) metric that measures the area under the Receiver Operating Curve (ROC) at various binary classification thresholds, plotted on TPR (y) vs. FPR (x). <ul><li>The model is classifying well if TPR is high and FPR is low.</li><li>1.0 score indicates perfect performance</li><li>0.5 score is random guessing</li></ul> <p>Useful when you want to assess how well a model can separate the two classes (positive and negative) and when you care about the overall performance across all possible thresholds. It's particularly helpful when dealing with balanced datasets or when both false positives and false negatives have similar costs.</p>"
                                 },
                                 {
-                                  "id": "211226", "question": "ROC Curve", "links": ["211220"], "subtopic": "Machine Learning",
-                                  "answer": "Used to evaluate the performance of a binary classifier by plotting TPR (y) vs. FPR (x) at various classification thresholds. <ul><li>The model is classifying well if TPR is high and FPR is low in general.</li></ul>"
+                                  "id": "211226", "question": "AUPRC", "links": ["211220"], "subtopic": "Machine Learning",
+                                  "answer": "Area Under the Precision-Recall Curve (AUPRC) is a type of Area Under the Curve (AUC) metric that measures the area under the Precision-Recall Curve (PR-Curve) at various binary classification thresholds, plotted on precision (y) vs. recall (x). <ul><li>The model is classifying well if precision and recall are high.</li><li>1.0 score indicates perfect performance</li><li>0.5 score is random guessing</li></ul> <p>More informative than AUROC when dealing with imbalanced datasets where there are significantly more negative examples than positive examples, or when the cost of false positives is high (e.g., rare disease detection, fraud detection). </p>"
                                 },
                                 {
                                   "id": "211227", "question": "FPR", "links": ["211220"], "subtopic": "Machine Learning",
