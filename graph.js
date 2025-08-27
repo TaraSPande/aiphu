@@ -8,11 +8,6 @@ const zoom = d3.zoom()
   .on("zoom", (event) => container.attr("transform", event.transform));
 svg.call(zoom);
 
-function resetView() {
-  const selected = d3.select("#subtopic-filter").node().value;
-  updateVisibility(selected);
-}
-
 let selectedNodeId = null;
 let allNodes = [];
 let allLinks = [];
@@ -235,6 +230,11 @@ function searchNode() {
   } else {
     alert("No matching node found.");
   }
+}
+
+function resetView() {
+  const selected = d3.select("#subtopic-filter").node().value;
+  updateVisibility(selected);
 }
 
 function updateSuggestions() {
