@@ -231,7 +231,7 @@ function viewportSize() {
 function centerOn(x, y, scale = 0.4, duration = 750) {
   const { w, h } = viewportSize();
   const transform = d3.zoomIdentity
-    .translate(w / 2 - x * scale, h / 2 - y * scale)
+    .translate(w / 2 - x * scale - 1, h / 2 - y * scale)
     .scale(scale);
   svg.transition().duration(duration).call(zoom.transform, transform);
 }
