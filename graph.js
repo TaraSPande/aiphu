@@ -132,14 +132,19 @@ fetch('flashcards.json')
     };
 
     function updateVisibility(filterValue) {
-      nodeElements.attr("visibility", d =>
-        filterValue === "all" || d.subtopic === filterValue ? "visible" : "hidden");
-      labelElements.attr("visibility", d =>
-        filterValue === "all" || d.subtopic === filterValue ? "visible" : "hidden");
-      linkElements.attr("visibility", d =>
-        (filterValue === "all" ||
-         (d.source.subtopic === filterValue && d.target.subtopic === filterValue)) ? "visible" : "hidden");
+      // nodeElements.attr("visibility", d =>
+      //   filterValue === "all" || d.subtopic === filterValue ? "visible" : "hidden");
+      // labelElements.attr("visibility", d =>
+      //   filterValue === "all" || d.subtopic === filterValue ? "visible" : "hidden");
+      // linkElements.attr("visibility", d =>
+      //   (filterValue === "all" ||
+      //    (d.source.subtopic === filterValue && d.target.subtopic === filterValue)) ? "visible" : "hidden");
 
+      if (filterValue == "all") {
+        resetView();
+        return;
+      }
+      
       const focalTerm = focalMap[filterValue];
       if (focalTerm) {
         const t = (focalTerm || "").toLowerCase();
@@ -157,10 +162,6 @@ fetch('flashcards.json')
             .duration(750)
             .call(zoom.transform, transform);
         }
-      }
-
-      if (filterValue == "all") {
-        resetView();
       }
     }
 
