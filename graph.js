@@ -162,6 +162,7 @@ fetch('flashcards.json')
 
     const { w, h } = viewportSize();
     centerOn(w, h, 0.25, 0);
+    window.updateVisibility = updateVisibility;
   });
 
 // Drag support
@@ -219,7 +220,7 @@ function searchNode() {
 
 function resetView() {
   const selected = d3.select("#subtopic-filter").node().value;
-  updateVisibility(selected);
+  window.updateVisibility(selected);
 }
 
 function viewportSize() {
