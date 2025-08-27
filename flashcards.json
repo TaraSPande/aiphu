@@ -12,8 +12,8 @@
                 "answer": "Identify a biological molecule linked to disease and confirm its relevance experimentally."
               },
               {
-                "id": "112000", "question": "Hit2Leads", "links": ["110000"], "subtopic": "Regulation",
-                "answer": "Finding molecules with measurable activity against the target, confirming hits are real and reproducible, and making iterative chemical modifications to improve efficacy, safety, and pharmacokinetics."
+                "id": "112000", "question": "Therapeutic Modalities", "links": ["110000"], "subtopic": "Regulation",
+                "answer": "Find molecules with measurable activity against the target, confirm hits are real and reproducible, and make iterative chemical modifications to improve efficacy, safety, and pharmacokinetics."
               },
                     {
                       "id": "112100", "question": "Small Molecules", "links": ["112000"], "subtopic": "Regulation",
@@ -73,7 +73,7 @@
         },
         {
           "id": "150000", "question": "Post-Marketing Studies", "links": ["100000"], "subtopic": "Regulation",
-          "answer": "Ongoing safety and effectiveness monitoring after approval. Also called 'Phase 4'."
+          "answer": "Ongoing safety and effectiveness monitoring after approval. <p>Also called 'Phase 4'.</p>"
         },
               {
                 "id": "151000", "question": "Retrospective Studies", "links": ["150000"], "subtopic": "Regulation",
