@@ -159,7 +159,7 @@ fetch('flashcards.json')
         }
       }
 
-      if (filterValue == "All") {
+      if (filterValue == "all") {
         resetView();
       }
     }
