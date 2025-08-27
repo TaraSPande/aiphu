@@ -411,7 +411,7 @@
                           },
               {
                 "id": "313000", "question": "Clearance", "links": ["310000"], "subtopic": "Pharmacology",
-                "answer": "Drug elimination efficiency: the efficiency of the body at irreversibly removing the drug from blood plasma.<p>$CL=Q_B\\cdot E</p><p>$E_{high} \\rightarrow CL \\approx Q_B$</p><p>$E_{low} \\rightarrow CL \\approx f_u \\cdot CL_I$</p>"
+                "answer": "Drug elimination efficiency: the efficiency of the body at irreversibly removing the drug from blood plasma.<p>$CL=Q_B\\cdot E$</p>"
               },
                     {
                       "id": "313100", "question": "Extraction Ratio (E)", "links": ["313000"], "subtopic": "Pharmacology",
@@ -431,7 +431,7 @@
                     },
                     {
                       "id": "313500", "question": "Well-Stirred Model (WSM)", "links": ["313000"], "subtopic": "Pharmacology",
-                      "answer": "The WSM simplifies the complex process of drug elimination by the liver, treating it as a single, well-mixed compartment. <p>This eliminates the need to consider intricate blood flow patterns and drug distribution within the liver.</p><p>$CL_H=\\frac{Q_B \\cdot f_u \\cdot CL_I}{Q_B + f_u \\cdot CL_I}$</p>"
+                      "answer": "The WSM simplifies the complex process of drug elimination by the liver, treating it as a single, well-mixed compartment. <p>This eliminates the need to consider intricate blood flow patterns and drug distribution within the liver.</p><p>$CL_H=\\frac{Q_B \\cdot f_u \\cdot CL_I}{Q_B + f_u \\cdot CL_I}$</p><p>$E_{high} \\rightarrow CL \\approx Q_B$</p><p>$E_{low} \\rightarrow CL \\approx f_u \\cdot CL_I$</p>"
                     },
               {
                 "id": "314000", "question": "Half Life", "links": ["310000"], "subtopic": "Pharmacology",
@@ -439,7 +439,7 @@
               },
               {
                 "id": "315000", "question": "Steady State", "links": ["310000"], "subtopic": "Pharmacology",
-                "answer": "At steady state, rate in = rate out. In other words, infusion rate (dosage rate) = rate of elimination ($CL \\cdot C$).</p><p>$R_{in} = CL*C_{ss}$</p>"
+                "answer": "At steady state, rate in = rate out. In other words, infusion rate (dosage rate) = rate of elimination ($CL \\cdot C$).</p><p>$R_{in} = CL \\cdot C_{ss}$</p>"
               },
                     {
                       "id": "315100", "question": "Rate of Elimination", "links": ["315000"], "subtopic": "Pharmacology",
