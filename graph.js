@@ -97,7 +97,7 @@ fetch('flashcards.json')
       selectedNodeId = null;
       nodeElements.classed("highlighted", false);
       document.getElementById("qa-display").innerHTML = `
-        <p>Click on a node to see its question and answer.</p>
+        <p>Click on a node to see its contents.</p>
       `;
       document.getElementById("suggestions").innerHTML = "";
       document.getElementById("node-search").value = "";
@@ -121,55 +121,47 @@ fetch('flashcards.json')
     };
 
     function updateVisibility(filterValue) {
-      // nodeElements.attr("visibility", d =>
-      //   filterValue === "all" || d.subtopic === filterValue ? "visible" : "hidden");
-      // labelElements.attr("visibility", d =>
-      //   filterValue === "all" || d.subtopic === filterValue ? "visible" : "hidden");
-      // linkElements.attr("visibility", d =>
-      //   (filterValue === "all" ||
-      //    (d.source.subtopic === filterValue && d.target.subtopic === filterValue)) ? "visible" : "hidden");
-
-      if (filterValue == "all") {
-        const zoomOutScale = 0.15;
-        const centerX = width / 2;
-        const centerY = height / 2;
-        const transform = d3.zoomIdentity
-          .translate(centerX * (1 - zoomOutScale), centerY * (1 - zoomOutScale))
-          .scale(zoomOutScale);
+      const fv = String(filterValue || "").toLowerCase();
       
-        svg.transition().duration(500).call(zoom.transform, transform);
+      // nodeElements.attr("visibility", d =>
+      //   fv === "all" || (d.subtopic || "").toLowerCase() === fv ? "visible" : "hidden"
+      // );
+      // labelElements.attr("visibility", d =>
+      //   fv === "all" || (d.subtopic || "").toLowerCase() === fv ? "visible" : "hidden"
+      // );
+      // linkElements.attr("visibility", d =>
+      //   fv === "all" ||
+      // ((d.source.subtopic || "").toLowerCase() === fv &&
+      //  (d.target.subtopic || "").toLowerCase() === fv) ? "visible" : "hidden"
+      // );
+
+      if (fv === "all") {
+        const { w, h } = viewportSize();
+        centerOn(w, h, 0.15, 500);
         return;
       }
       
-      const focalTerm = focalMap[filterValue];
-      if (focalTerm) {
-        const t = (focalTerm || "").toLowerCase();
+      const focalTerm = focalMap[fv] || focalMap[filterValue];
+        if (!focalTerm) return;
+      
+        const t = String(focalTerm).toLowerCase();
         const match = allNodes.find(d =>
           (d.id && d.id.toLowerCase() === t) ||
           (d.question && d.question.toLowerCase() === t)
         );
-        if (match && Number.isFinite(match.x) && Number.isFinite(match.y)) {
-          const scale = 0.4;
-          const transform = d3.zoomIdentity
-            .translate(width / 2 - match.x * scale, height / 2 - match.y * scale)
-            .scale(scale);
-    
-          svg.transition()
-            .duration(750)
-            .call(zoom.transform, transform);
+        if (!match) return;
+      
+        // Ensure positions exist before zooming (in case user clicks reset very early)
+        if (!Number.isFinite(match.x) || !Number.isFinite(match.y)) {
+          requestAnimationFrame(() => updateVisibility(filterValue));
+          return;
         }
-      }
+      
+        centerOn(match.x, match.y, 0.4, 750);
     }
 
-    const initialScale = 0.25;
-    const centerX = width / 2;
-    const centerY = height / 2;
-
-    const initialTransform = d3.zoomIdentity
-      .translate(centerX - centerX * initialScale, centerY - centerY * initialScale)
-      .scale(initialScale);
-
-    svg.call(zoom.transform, initialTransform);
+    const { w, h } = viewportSize();
+    centerOn(w, h, 0.25, 0);
   });
 
 // Drag support
@@ -219,14 +211,7 @@ function searchNode() {
     MathJax.typesetPromise();
 
     // Zoom to it smoothly
-    const scale = 1.5;
-    const transform = d3.zoomIdentity
-      .translate(width / 2 - match.x * scale, height / 2 - match.y * scale)
-      .scale(scale);
-
-    svg.transition()
-      .duration(750)
-      .call(zoom.transform, transform);
+    centerOn(match.x, match.y, 1.5, 750);
   } else {
     alert("No matching node found.");
   }
@@ -235,6 +220,19 @@ function searchNode() {
 function resetView() {
   const selected = d3.select("#subtopic-filter").node().value;
   updateVisibility(selected);
+}
+
+function viewportSize() {
+  const rect = svg.node().getBoundingClientRect();
+  return { w: rect.width, h: rect.height };
+}
+
+function centerOn(x, y, scale = 0.4, duration = 750) {
+  const { w, h } = viewportSize();
+  const transform = d3.zoomIdentity
+    .translate(w / 2 - x * scale, h / 2 - y * scale)
+    .scale(scale);
+  svg.transition().duration(duration).call(zoom.transform, transform);
 }
 
 function updateSuggestions() {
@@ -276,14 +274,7 @@ function updateSuggestions() {
         MathJax.typesetPromise();
     
         // Zoom to it smoothly
-        const scale = 1.5;
-        const transform = d3.zoomIdentity
-          .translate(width / 2 - match.x * scale, height / 2 - match.y * scale)
-          .scale(scale);
-    
-        svg.transition()
-          .duration(750)
-          .call(zoom.transform, transform);
+        centerOn(match.x, match.y, 1.5, 750);
         
         suggestionsDiv.innerHTML = "";
       });
