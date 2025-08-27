@@ -141,7 +141,14 @@ fetch('flashcards.json')
       //    (d.source.subtopic === filterValue && d.target.subtopic === filterValue)) ? "visible" : "hidden");
 
       if (filterValue == "all") {
-        resetView();
+        const zoomOutScale = 0.15;
+        const centerX = width / 2;
+        const centerY = height / 2;
+        const transform = d3.zoomIdentity
+          .translate(centerX * (1 - zoomOutScale), centerY * (1 - zoomOutScale))
+          .scale(zoomOutScale);
+      
+        svg.transition().duration(500).call(zoom.transform, transform);
         return;
       }
       
