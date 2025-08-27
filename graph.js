@@ -158,6 +158,10 @@ fetch('flashcards.json')
             .call(zoom.transform, transform);
         }
       }
+
+      if (filterValue == "All") {
+        resetView();
+      }
     }
 
     const initialScale = 0.25;
