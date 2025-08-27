@@ -124,6 +124,13 @@ fetch('flashcards.json')
         .attr("x", d => d.x + 25).attr("y", d => d.y);
     });
 
+    const focalMap = {
+      Pharmacology: "Pharmacology",
+      Regulation: "Drug Development",
+      Infastructure: "Information Commons (IC)",
+      "Machine Learning": "Artificial Intelligence"
+    };
+
     function updateVisibility(filterValue) {
       nodeElements.attr("visibility", d =>
         filterValue === "all" || d.subtopic === filterValue ? "visible" : "hidden");
@@ -132,6 +139,25 @@ fetch('flashcards.json')
       linkElements.attr("visibility", d =>
         (filterValue === "all" ||
          (d.source.subtopic === filterValue && d.target.subtopic === filterValue)) ? "visible" : "hidden");
+
+      const focalTerm = focalMap[filterValue];
+      if (focalTerm) {
+        const t = (focalTerm || "").toLowerCase();
+        const match = allNodes.find(d =>
+          (d.id && d.id.toLowerCase() === t) ||
+          (d.question && d.question.toLowerCase() === t)
+        );
+        if (match && Number.isFinite(match.x) && Number.isFinite(match.y)) {
+          const scale = 0.4;
+          const transform = d3.zoomIdentity
+            .translate(width / 2 - match.x * scale, height / 2 - match.y * scale)
+            .scale(scale);
+    
+          svg.transition()
+            .duration(750)
+            .call(zoom.transform, transform);
+        }
+      }
     }
 
     const initialScale = 0.25;
