@@ -523,6 +523,10 @@
                       "id": "71220", "question": "PHI", "links" : ["71200"], "subtopic": "Infastructure",
                       "answer": "Protected Health Information is inherently identifiable information that requires an Institutional Review Board (IRB) to approve its usage."
                     },
+                          {
+                            "id": "71221", "question": "HIPPA Compliance", "links" : ["71220"], "subtopic": "Infastructure",
+                            "answer": "HIPAA is a federal law that specifically governs national standards to protect the privacy and security of individuals' health information.<p>Controls how 'covered entities' (healthcare providers, etc) and their business associates handle PHI.</p>"
+                          },
               {
                 "id": "71300", "question": "Cohort Design", "links" : ["71000"], "subtopic": "Infastructure",
                 "answer": "Designing a cohort from electronic health record (EHR) data involves carefully defining inclusion and exclusion criteria, selecting appropriate data elements, and establishing baseline characteristics and follow-up procedures.<p>This process transforms raw EHR data into a structured dataset suitable for retrospective studies.</p>"
