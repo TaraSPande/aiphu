@@ -53,15 +53,15 @@
         },
               {
                 "id": "131000", "question": "Phase 1", "links": ["130000"], "subtopic": "Regulation",
-                "answer": "First-in-human, small group; focuses on safety, dosage, and pharmacokinetics."
+                "answer": "First-in-human, small group; focuses on safety, dosage, and pharmacokinetics.<p>20-99 patients total.</p>"
               },
               {
                 "id": "132000", "question": "Phase 2", "links": ["130000"], "subtopic": "Regulation",
-                "answer": "Larger group; assesses efficacy, side effects, and pharmacodynamics."
+                "answer": "Larger group; assesses efficacy, side effects, and pharmacodynamics.<p>100-300 patients total.</p>"
               },
               {
                 "id": "133000", "question": "Phase 3", "links": ["130000"], "subtopic": "Regulation",
-                "answer": "Large-scale trials to confirm efficacy, monitor adverse reactions, and compare to standard treatments. Evaluate clinical endpoints."
+                "answer": "Large-scale trials to confirm efficacy, monitor adverse reactions, and compare to standard treatments. Evaluate clinical endpoints.<p>301-3000+ patients total.</p>"
               },
                     {
                       "id": "133100", "question": "Endpoints", "links": ["133000"], "subtopic": "Regulation",
@@ -73,7 +73,7 @@
         },
         {
           "id": "150000", "question": "Post-Marketing Studies", "links": ["100000"], "subtopic": "Regulation",
-          "answer": "Ongoing safety and effectiveness monitoring after approval. <p>Also called 'Phase 4'.</p>"
+          "answer": "Ongoing safety and effectiveness monitoring of drug after FDA approval. <p>Also called 'Phase 4'.</p><p>Utilizes several thousands of patients (exact number is highly variable).</p>"
         },
               {
                 "id": "151000", "question": "Retrospective Studies", "links": ["150000"], "subtopic": "Regulation",
@@ -82,6 +82,10 @@
               {
                 "id": "152000", "question": "DDI Studies", "links": ["150000"], "subtopic": "Regulation",
                 "answer": "Experiments or analyses assessing how one drug affects the pharmacokinetics or pharmacodynamics of another."
+              },
+              {
+                "id": "153000", "question": "Propensity Score Matching (PSM)", "links": ["150000"], "subtopic": "Regulation",
+                "answer": "PSM is used to create comparable groups from EHR data to more accurately evaluate post-approval drug safety and effectiveness. <p>Researchers use a logistic regression model to calculate a single number, the propensity score, for each participant. This score represents the probability of that individual being assigned to the treatment group based on their baseline characteristics (covariates), such as age, disease severity, and other factors.</p><p>Treated participants are matched with untreated participants who have similar propensity scores.</p>"
               },
         {
           "id": "160000", "question": "Code of Federal Regulations (CFR) Title 21", "links": ["100000"], "subtopic": "Regulation",
@@ -407,7 +411,7 @@
                     },
                           {
                             "id": "312110", "question": "Plasma Binding Proteins", "links": ["312100"], "subtopic": "Pharmacology",
-                            "answer": "<ul><li>Albumin</li><li>$\\alpha_1$-Acid glycoprotein</li><li>Lipoproteins</li><li>Cortisol binding globulin (transcortin)</li><li>Sex-binding globulin</li></ul>"
+                            "answer": "<ul><li>Albumin</li><li>$\\alpha_1$-Acid glycoprotein</li><li>Lipoproteins</li><li>Cortisol binding globulin (transcortin)</li><li>Sex-binding globulin</li></ul>Acidic drugs most extensively bind to albumin, whereas basic drugs are more likely to bind to AAG.<p></p>"
                           },
               {
                 "id": "313000", "question": "Clearance", "links": ["310000"], "subtopic": "Pharmacology",
