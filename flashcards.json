@@ -562,5 +562,9 @@
                     {
                       "id": "72310", "question": "Virtual Environment", "links" : ["72300"], "subtopic": "Infastructure",
                       "answer": "A self-contained coding environment (often Python) with its own packages and dependencies, preventing conflicts between projects."
-                    }
+                    },
+              {
+                "id": "72400", "question": "Federated Learning", "links" : ["72000"], "subtopic": "Infastructure",
+                "answer": "A machine learning technique that trains a shared, global model across many distributed devices or servers holding local data, without moving the data itself.<p>In this process, each device independently updates its local copy of the model using its data, then sends only the model updates to a central server, which aggregates these updates to create an improved global model.</p><p>This approach significantly enhances privacy and security by keeping sensitive data on local devices, making it ideal for applications (ex. healthcare) where data centralization is impractical or undesirable.</p>"
+              }
 ]
